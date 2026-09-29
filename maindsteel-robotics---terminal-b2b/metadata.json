@@ -1,0 +1,6 @@
+{
+  "name": "Maindsteel Robotics - Terminal B2B",
+  "description": "API de Renderizado e Interfaz Gráfica para el chatbot de la división Maindsteel Robotics. Procesamiento de cotizaciones industriales B2B con identidad de marca de alta fidelidad.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

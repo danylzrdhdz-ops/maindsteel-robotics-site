@@ -1,0 +1,144 @@
+{
+  "nosotros": {
+    "heroTitle": "Nosotros",
+    "blocks": [
+      {
+        "title": "¿Quienes somos?",
+        "body": "Somos una empresa comercializadora especializada en soluciones de automatización industrial y tecnologías de integración, orientadas a clientes que requieren ingeniería experta, eficiencia operativa y resultados medibles."
+      },
+      {
+        "title": "Nuestra Misión",
+        "body": "Impulsamos la transformación tecnológica de la industria mediante soluciones inteligentes de automatización y control. Nos enfocamos en entender a fondo las necesidades de cada cliente para desarrollar proyectos robustos, eficientes y sostenibles. Estamos comprometidos con la calidad, integramos tecnología avanzada y prácticas sostenibles para satisfacer las demandas de un mercado global en constante evolución."
+      },
+      {
+        "title": "Nuestra Visión",
+        "body": "Ser líderes en la integración de tecnologías avanzadas para la automatización industrial, reconocidos por nuestra capacidad de innovación, excelencia operativa y compromiso con el desarrollo sostenible. Aspiramos a transformar la industria en América Latina, impulsando la eficiencia, seguridad y competitividad de nuestros clientes, mientras construimos relaciones sólidas y duraderas basadas en la confianza y el valor agregado."
+      },
+      {
+        "title": "PRODUCTOS Y SERVICIOS",
+        "body": "Ofrecemos un portafolio integral que abarca desde la venta de maquinaria especializada, asesoría, diseño, hasta la implementación de soluciones avanzadas de automatización para optimizar procesos industriales."
+      }
+    ]
+  },
+  "servicios": {
+    "heroTitle": "Nuestros servicios",
+    "quoteButton": "SOLICITAR COTIZACIÓN",
+    "kpiGuarantee": "KPI GARANTIZADO",
+    "services": [
+      {
+        "title": "Automatización Industrial",
+        "body": "Desarrollamos ecosistemas de manufactura de alta velocidad especializados en ensamblaje de precisión y procesos de soldadura automatizada. Nuestras células integran visión artificial avanzada y cinemática optimizada para ciclos de producción ininterrumpidos de grado automotriz.",
+        "list": [
+          "Soldadura por arco y resistencia de alta precisión.",
+          "Sistemas Pick & Place de ultra-velocidad."
+        ]
+      },
+      {
+        "title": "Integración de Robots",
+        "body": "Implementamos el motor \"Core Control IA\" para el monitoreo de salud de activos en tiempo real. Mediante algoritmos de aprendizaje profundo, detectamos anomalías antes de que ocurran fallas, reduciendo drásticamente el tiempo de inactividad no planificado y optimizando la vida útil de los componentes críticos."
+      },
+      {
+        "title": "Comercialización a proveedores",
+        "body": "Expertos en lógica multiplataforma (Siemens, Rockwell, Beckhoff) bajo estándares de seguridad SIL3. Desarrollamos arquitecturas de control distribuidas utilizando protocolos EtherCAT y Profinet de alta velocidad para una sincronización perfecta entre cientos de nodos industriales."
+      },
+      {
+        "title": "Venta de robots y maquinaria industrial",
+        "body": "Expertos en lógica multiplataforma (Siemens, Rockwell, Beckhoff) bajo estándares de seguridad SIL3. Desarrollamos arquitecturas de control distribuidas utilizando protocolos EtherCAT y Profinet de alta velocidad para una sincronización perfecta entre cientos de nodos industriales."
+      },
+      {
+        "title": "Asesoría técnica y selección de equipo",
+        "body": "Expertos en lógica multiplataforma (Siemens, Rockwell, Beckhoff) bajo estándares de seguridad SIL3. Desarrollamos arquitecturas de control distribuidas utilizando protocolos EtherCAT y Profinet de alta velocidad para una sincronización perfecta entre cientos de nodos industriales."
+      }
+    ]
+  },
+  "contacto": {
+    "heroTitle": "Conecte con nuestros ingenieros",
+    "addressLabel": "Dirección",
+    "phoneLabel": "Celular",
+    "emailLabel": "Correo",
+    "tagline": "Precision engineered solutions for global scale industry",
+    "form": {
+      "nameLabel": "NOMBRE COMPLETO",
+      "emailLabel": "CORREO CORPORATIVO",
+      "companyLabel": "EMPRESA",
+      "detailsLabel": "DETALLES DEL PROYECTO / TIPO DE ROBOT REQUERIDO",
+      "submitButton": "Enviar solicitud de ingenieria",
+      "successMessage": "Gracias, un ingeniero te contactará en breve."
+    }
+  },
+  "blog": {
+    "heroTitle": "Blog",
+    "kpis": [
+      { "value": "99.8%", "label": "UPTIME GARANTIZADO" },
+      { "value": "-75%", "label": "TIEMPOS DE CICLO" },
+      { "value": "+50%", "label": "PRODUCTIVIDAD NETA" }
+    ],
+    "portfolio": {
+      "title": "PORTAFOLIO DE SOLUCIONES",
+      "filters": ["TODOS", "RECIENTES", "ANTERIORES"],
+      "readMore": "LEER MAS"
+    },
+    "appliedEngineering": {
+      "tag": "INGENIERÍA APLICADA",
+      "title": "Soluciones integrales en automatización industrial",
+      "quote": "Maquinaria y tecnología para un mundo en evolución"
+    }
+  },
+  "nav": {
+    "home": "Inicio",
+    "products": "Productos",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "search": "Buscar",
+    "quoteButton": "Solicitar Cotización",
+    "language": "Idioma"
+  },
+  "home": {
+    "hero": {
+      "title": "MAINDSTEEL ROBOTICS",
+      "subtitle": "Maquinaria y tecnología para un mundo en evolución.",
+      "requestQuote": "Solicitar Cotización",
+      "requestService": "Solicitar un servicio"
+    },
+    "stats": [
+      { "value": "+350", "label": "Proyectos entregados" },
+      { "value": "+350", "label": "Robots integrados" },
+      { "value": "+350", "label": "Clientes industriales" }
+    ],
+    "models": {
+      "title": "Conoce nuestros modelos",
+      "moreInfo": "Mas información"
+    },
+    "metrics": {
+      "uptimeLabel": "Uptime operativo",
+      "costLabel": "Reducción de costes",
+      "question": "¿Sabías que Maindsteel es una empresa que ofrece soluciones?",
+      "readMore": "Leer mas"
+    },
+    "clients": {
+      "title": "Nuestros clientes"
+    }
+  },
+  "footer": {
+    "subtitle": "Maquinaria y tecnología para un mundo en evolución",
+    "legalTitle": "LEGAL",
+    "sitemapTitle": "MAPA EL SITIO",
+    "contactTitle": "CONTACTO Y DIRECCIÓN",
+    "legal": [
+      { "label": "AVISO DE PRIVACIDAD", "href": "/contacto" },
+      { "label": "TÉRMINOS Y CONDICIONES", "href": "/contacto" },
+      { "label": "GARANTÍA", "href": "/contacto" }
+    ],
+    "sitemap": [
+      { "label": "Inicio", "href": "/" },
+      { "label": "Productos", "href": "/productos" },
+      { "label": "Servicios", "href": "/servicios" },
+      { "label": "Portafolio", "href": "/blog" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Contacto", "href": "/contacto" }
+    ],
+    "address": "Municipio de Calvillo 103, 20358 Jesús María, Aguascalientes"
+  }
+}

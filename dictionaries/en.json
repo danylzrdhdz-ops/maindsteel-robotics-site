@@ -1,0 +1,144 @@
+{
+  "nosotros": {
+    "heroTitle": "About Us",
+    "blocks": [
+      {
+        "title": "Who we are?",
+        "body": "We are a trading company specialized in industrial automation solutions and integration technologies, aimed at clients requiring expert engineering, operational efficiency, and measurable results."
+      },
+      {
+        "title": "Our Mission",
+        "body": "We drive the technological transformation of the industry through intelligent control and automation solutions. We focus on fully understanding each client's needs to develop robust, efficient, and sustainable projects. We are committed to quality, engaging advanced technology and sustainable practices to meet the demands of an evolving global market."
+      },
+      {
+        "title": "Our Vision",
+        "body": "To be leaders in the integration of advanced technologies for industrial automation, recognized for our ability to innovate, operational excellence, and commitment to sustainable development. We aspire to transform the industry in Latin America, driving efficiency, safety, and competitiveness for our clients while building lasting relationships based on trust and added value."
+      },
+      {
+        "title": "PRODUCTS AND SERVICES",
+        "body": "We offer a comprehensive portfolio ranging from the sale of specialized machinery, consulting, and design, to the implementation of advanced automation solutions to optimize industrial processes."
+      }
+    ]
+  },
+  "servicios": {
+    "heroTitle": "Our Services",
+    "quoteButton": "REQUEST A QUOTE",
+    "kpiGuarantee": "GUARANTEED KPI",
+    "services": [
+      {
+        "title": "Industrial Automation",
+        "body": "We develop high-speed manufacturing ecosystems specialized in precision assembly and automated welding processes. Our cells integrate advanced artificial vision and optimized kinematics for uninterrupted automotive-grade production cycles.",
+        "list": [
+          "High-precision arc and resistance welding.",
+          "Ultra-speed Pick & Place systems."
+        ]
+      },
+      {
+        "title": "Robot Integration",
+        "body": "We deploy the \"Core Control AI\" engine for real-time asset health monitoring. Using deep learning algorithms, we detect anomalies before failures occur, drastically reducing unplanned downtime and optimizing the lifespan of critical components."
+      },
+      {
+        "title": "Supplier Commercialization",
+        "body": "Experts in multi-platform logic (Siemens, Rockwell, Beckhoff) under SIL3 safety standards. We develop distributed control architectures using high-speed EtherCAT and Profinet protocols for perfect synchronization across hundreds of industrial nodes."
+      },
+      {
+        "title": "Sales of Robots and Industrial Machinery",
+        "body": "Experts in multi-platform logic (Siemens, Rockwell, Beckhoff) under SIL3 safety standards. We develop distributed control architectures using high-speed EtherCAT and Profinet protocols for perfect synchronization across hundreds of industrial nodes."
+      },
+      {
+        "title": "Technical Consulting & Equipment Selection",
+        "body": "Experts in multi-platform logic (Siemens, Rockwell, Beckhoff) under SIL3 safety standards. We develop distributed control architectures using high-speed EtherCAT and Profinet protocols for perfect synchronization across hundreds of industrial nodes."
+      }
+    ]
+  },
+  "contacto": {
+    "heroTitle": "Connect with our engineers",
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "tagline": "Precision engineered solutions for global scale industry",
+    "form": {
+      "nameLabel": "FULL NAME",
+      "emailLabel": "CORPORATE EMAIL",
+      "companyLabel": "COMPANY",
+      "detailsLabel": "PROJECT DETAILS / TYPE OF ROBOT REQUIRED",
+      "submitButton": "Send engineering request",
+      "successMessage": "Thank you, an engineer will contact you shortly."
+    }
+  },
+  "blog": {
+    "heroTitle": "Blog",
+    "kpis": [
+      { "value": "99.8%", "label": "GUARANTEED UPTIME" },
+      { "value": "-75%", "label": "CYCLE TIMES" },
+      { "value": "+50%", "label": "NET PRODUCTIVITY" }
+    ],
+    "portfolio": {
+      "title": "SOLUTIONS PORTFOLIO",
+      "filters": ["ALL", "RECENT", "OLDER"],
+      "readMore": "READ MORE"
+    },
+    "appliedEngineering": {
+      "tag": "APPLIED ENGINEERING",
+      "title": "Comprehensive solutions in industrial automation",
+      "quote": "Machinery and technology for an evolving world"
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "services": "Services",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "search": "Search",
+    "quoteButton": "Request a Quote",
+    "language": "Language"
+  },
+  "home": {
+    "hero": {
+      "title": "MAINDSTEEL ROBOTICS",
+      "subtitle": "Machinery and technology for an evolving world.",
+      "requestQuote": "Request a Quote",
+      "requestService": "Request a service"
+    },
+    "stats": [
+      { "value": "+350", "label": "Projects delivered" },
+      { "value": "+350", "label": "Robots integrated" },
+      { "value": "+350", "label": "Industrial clients" }
+    ],
+    "models": {
+      "title": "Discover our models",
+      "moreInfo": "More info"
+    },
+    "metrics": {
+      "uptimeLabel": "Operational uptime",
+      "costLabel": "Cost reduction",
+      "question": "Did you know that Maindsteel is a solutions-oriented company?",
+      "readMore": "Read more"
+    },
+    "clients": {
+      "title": "Our clients"
+    }
+  },
+  "footer": {
+    "subtitle": "Machinery and technology for an evolving world",
+    "legalTitle": "LEGAL",
+    "sitemapTitle": "SITEMAP",
+    "contactTitle": "CONTACT & ADDRESS",
+    "legal": [
+      { "label": "PRIVACY POLICY", "href": "/contacto" },
+      { "label": "TERMS AND CONDITIONS", "href": "/contacto" },
+      { "label": "WARRANTY", "href": "/contacto" }
+    ],
+    "sitemap": [
+      { "label": "Home", "href": "/" },
+      { "label": "Products", "href": "/productos" },
+      { "label": "Services", "href": "/servicios" },
+      { "label": "Portfolio", "href": "/blog" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Contact", "href": "/contacto" }
+    ],
+    "address": "Municipio de Calvillo 103, 20358 Jesús María, Aguascalientes, Mexico"
+  }
+}

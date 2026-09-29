@@ -1,0 +1,64 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import React, { useState } from 'react';
+import { Header } from './components/Header';
+import { ChatTerminal } from './components/ChatTerminal';
+import { CatalogModal } from './components/CatalogModal';
+import { sound } from './soundEffects';
+
+export default function App() {
+  const [isCatalogOpen, setIsCatalogOpen] = useState(false);
+  const [audioEnabled, setAudioEnabled] = useState(true);
+  const [selectedSolutionFromCatalog, setSelectedSolutionFromCatalog] = useState<string | null>(null);
+  const [resetCounter, setResetCounter] = useState(0);
+
+  const handleToggleAudio = () => {
+    const nextVal = !audioEnabled;
+    setAudioEnabled(nextVal);
+    sound.setEnabled(nextVal);
+    if (nextVal) {
+      sound.playKeyClick();
+    }
+  };
+
+  const handleReset = () => {
+    setResetCounter((c) => c + 1);
+  };
+
+  const handleSelectSolutionFromCatalog = (solutionName: string) => {
+    setSelectedSolutionFromCatalog(solutionName);
+  };
+
+  return (
+    <div className="min-h-screen bg-[#021D49] flex flex-col font-montserrat-black text-white selection:bg-[#AA2D29] selection:text-white">
+      {/* Top Corporate Bar */}
+      <Header
+        onReset={handleReset}
+        onOpenCatalog={() => setIsCatalogOpen(true)}
+        audioEnabled={audioEnabled}
+        onToggleAudio={handleToggleAudio}
+        activeStep={1}
+      />
+
+      {/* Main Terminal Viewport */}
+      <main className="flex-1 flex flex-col items-center justify-center">
+        <ChatTerminal
+          onOpenCatalog={() => setIsCatalogOpen(true)}
+          externalSelectedSolution={selectedSolutionFromCatalog}
+          onClearExternalSolution={() => setSelectedSolutionFromCatalog(null)}
+          onResetTrigger={resetCounter}
+        />
+      </main>
+
+      {/* Technical Machinery Catalog Drawer/Modal */}
+      <CatalogModal
+        isOpen={isCatalogOpen}
+        onClose={() => setIsCatalogOpen(false)}
+        onSelectSolution={handleSelectSolutionFromCatalog}
+      />
+    </div>
+  );
+}

@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --pantone-blue: #021D49;
+    --pantone-blue-dark: #011333;
+    --pantone-blue-light: #062a63;
+    --pantone-red: #AA2D29;
+    --pantone-red-hover: #c43530;
+    --pantone-red-glow: rgba(170, 45, 41, 0.4);
+  }
+
+  body {
+    background-color: #021D49;
+    color: #F8FAFC;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Emulating Akira Expanded Super Bold */
+.font-akira {
+  font-family: 'Montserrat', 'Chakra Petch', sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* Emulating Montserrat Black */
+.font-montserrat-black {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+
+.font-terminal {
+  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
+}
+
+/* Custom industrial scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #011333;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #AA2D29;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c43530;
+}
