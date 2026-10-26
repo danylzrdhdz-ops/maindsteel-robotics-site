@@ -21,26 +21,26 @@ export function Hero({ dict, lang = "es" }: { dict?: any; lang?: Lang }) {
         className="object-cover"
         quality={80}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/90 via-navy-deep/60 to-navy-deep/10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/80 via-navy-deep/55 to-navy-deep/80" />
 
-      <div className="relative mx-auto flex min-h-[560px] w-full max-w-[1400px] flex-col justify-center px-6 py-20 md:min-h-[680px] md:px-12">
-        <div className="w-full max-w-5xl">
-          <h1 className="max-w-[22ch] text-4xl leading-[0.98] text-balance text-white sm:text-6xl lg:text-7xl xl:text-8xl">
+      <div className="relative mx-auto flex min-h-[520px] w-full max-w-[1400px] flex-col items-center justify-center px-6 py-20 text-center md:min-h-[600px] md:px-12">
+        <div className="flex w-full max-w-4xl flex-col items-center">
+          <h1 className="text-4xl leading-[1.05] text-balance text-white sm:text-5xl lg:text-6xl">
             {t.title}
           </h1>
-          <p className="mt-6 max-w-[45ch] text-lg font-bold leading-relaxed text-white sm:text-xl md:text-2xl">
+          <p className="mt-5 max-w-[36ch] text-lg font-bold leading-relaxed text-white md:max-w-[42ch] md:text-xl">
             {t.subtitle}
           </p>
-          <div className="mt-10 grid w-full gap-4 sm:grid-cols-2">
+          <div className="mt-8 flex w-full flex-col items-center justify-center gap-4 sm:w-auto sm:flex-row">
             <Link
               href="/cotizaciones/index.html"
-              className="rounded-full bg-brick px-8 py-4 text-center text-base font-bold text-white transition-opacity hover:opacity-90"
+              className="w-full rounded-full bg-brick px-8 py-3 text-center text-sm font-bold text-white transition-opacity hover:opacity-90 sm:w-auto"
             >
               {t.requestQuote}
             </Link>
             <Link
               href={localePath(lang, "/servicios")}
-              className="rounded-full border-2 border-white px-8 py-4 text-center text-base font-bold text-white transition-colors hover:bg-white hover:text-navy-deep"
+              className="w-full rounded-full border-2 border-white px-8 py-3 text-center text-sm font-bold text-white transition-colors hover:bg-white hover:text-navy-deep sm:w-auto"
             >
               {t.requestService}
             </Link>
