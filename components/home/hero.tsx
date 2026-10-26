@@ -23,26 +23,28 @@ export function Hero({ dict, lang = "es" }: { dict?: any; lang?: Lang }) {
       />
       <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/90 via-navy-deep/60 to-navy-deep/10" />
 
-      <div className="relative mx-auto flex min-h-[520px] w-full max-w-[1400px] flex-col justify-center px-6 py-20 md:min-h-[600px] md:px-12">
-        <h1 className="max-w-[16ch] text-4xl leading-[1.05] text-balance text-white md:text-6xl">
-          {t.title}
-        </h1>
-        <p className="mt-5 max-w-[28ch] text-lg font-bold leading-relaxed text-white md:text-xl">
-          {t.subtitle}
-        </p>
-        <div className="mt-8 flex flex-col gap-4 sm:max-w-xs">
-          <Link
-            href="/cotizaciones/index.html"
-            className="rounded-full bg-brick px-8 py-3 text-center text-sm font-bold text-white transition-opacity hover:opacity-90"
-          >
-            {t.requestQuote}
-          </Link>
-          <Link
-            href={localePath(lang, "/servicios")}
-            className="rounded-full border-2 border-white px-8 py-3 text-center text-sm font-bold text-white transition-colors hover:bg-white hover:text-navy-deep"
-          >
-            {t.requestService}
-          </Link>
+      <div className="relative mx-auto flex min-h-[560px] w-full max-w-[1400px] flex-col justify-center px-6 py-20 md:min-h-[680px] md:px-12">
+        <div className="w-full max-w-5xl">
+          <h1 className="max-w-[22ch] text-4xl leading-[0.98] text-balance text-white sm:text-6xl lg:text-7xl xl:text-8xl">
+            {t.title}
+          </h1>
+          <p className="mt-6 max-w-[45ch] text-lg font-bold leading-relaxed text-white sm:text-xl md:text-2xl">
+            {t.subtitle}
+          </p>
+          <div className="mt-10 grid w-full gap-4 sm:grid-cols-2">
+            <Link
+              href="/cotizaciones/index.html"
+              className="rounded-full bg-brick px-8 py-4 text-center text-base font-bold text-white transition-opacity hover:opacity-90"
+            >
+              {t.requestQuote}
+            </Link>
+            <Link
+              href={localePath(lang, "/servicios")}
+              className="rounded-full border-2 border-white px-8 py-4 text-center text-base font-bold text-white transition-colors hover:bg-white hover:text-navy-deep"
+            >
+              {t.requestService}
+            </Link>
+          </div>
         </div>
       </div>
     </section>
