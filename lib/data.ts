@@ -12,7 +12,7 @@ export const getProducts = (lang: 'es' | 'en' = 'es'): Product[] => [
     slug: 'dobladora-de-lamina',
     name: lang === 'en' ? 'Sheet Metal Bending Machine' : 'Dobladora de lámina',
     category: lang === 'en' ? 'Bending' : 'Dobladoras',
-    image: '/images/dobladora-lamina-new.webp',
+    image: '/images/dobladora-lamina-new.png',
     title: lang === 'en' ? 'MTDAMA EP12-600 OF .6 MT.' : 'MTDAMA EP12-600 DE .6 MT.',
     specs: [
       { label: lang === 'en' ? 'All-Electric Servomotor' : 'Servomotor totalmente eléctrico', value: '12t-600mm' },
@@ -25,7 +25,7 @@ export const getProducts = (lang: 'es' | 'en' = 'es'): Product[] => [
     slug: 'dobladora-de-alambre',
     name: lang === 'en' ? 'Wire Bending Machine' : 'Dobladora de alambre',
     category: lang === 'en' ? 'Bending' : 'Dobladoras',
-    image: '/images/dobladora-alambre-new.webp',
+    image: '/images/dobladora-alambre-new.png',
     title: lang === 'en' ? 'MT-DAL 3-AXIS MODEL' : 'MT-DAL MODELO 3 EJES',
     specs: [
       { label: lang === 'en' ? 'Wire bending' : 'Dobladora de alambre', value: lang === 'en' ? '3-axis' : 'de 3 ejes' },
@@ -38,7 +38,7 @@ export const getProducts = (lang: 'es' | 'en' = 'es'): Product[] => [
     slug: 'robot-soldadura-laser',
     name: lang === 'en' ? 'Laser Welding Robot' : 'Robot soldadura laser',
     category: 'Robots',
-    image: '/images/robot-soldadura-laser-new.webp',
+    image: '/images/robot-soldadura-laser-new.png',
     title: lang === 'en' ? 'LASER WELDING ROBOT' : 'ROBOT SOLDADURA LASER',
     specs: [
       { label: lang === 'en' ? 'Payload' : 'Carga util', value: '10kg' },
@@ -51,7 +51,7 @@ export const getProducts = (lang: 'es' | 'en' = 'es'): Product[] => [
     slug: 'robot-corte-laser',
     name: lang === 'en' ? 'Laser Cutting Robot' : 'Robot corte laser',
     category: 'Robots',
-    image: '/images/robot-corte-laser-new.webp',
+    image: '/images/robot-corte-laser-new.png',
     title: lang === 'en' ? 'LASER CUTTING ROBOT' : 'ROBOT CORTE LASER',
     specs: [
       { label: lang === 'en' ? 'Number of axes' : 'Número de ejes', value: '6' },
@@ -64,7 +64,7 @@ export const getProducts = (lang: 'es' | 'en' = 'es'): Product[] => [
     slug: 'paneladora-maindsteel',
     name: lang === 'en' ? 'Maindsteel Paneler' : 'Paneladora Maindsteel',
     category: lang === 'en' ? 'Paneling' : 'Paneladoras',
-    image: '/images/paneladora-maindsteel-new.webp',
+    image: '/images/paneladora-maindsteel-new.png',
     title: lang === 'en' ? 'MT-P900 PANEL BENDER' : 'MODELO MT-P900 PANELADORA',
     specs: [
       { label: lang === 'en' ? 'Equipment size' : 'Tamaño del equipo', value: '13 ton' },
@@ -77,7 +77,7 @@ export const getProducts = (lang: 'es' | 'en' = 'es'): Product[] => [
     slug: 'montacargas-compacto',
     name: lang === 'en' ? 'Compact Forklift' : 'Montacargas compacto',
     category: lang === 'en' ? 'Forklifts' : 'Montacargas',
-    image: '/images/producto-montacargas-compacto.webp',
+    image: '/images/producto-montacargas-compacto.png',
     title: lang === 'en' ? 'COMPACT MODEL FORKLIFT' : 'MONTACARGAS MODELO COMPACTO',
     specs: [
       { label: lang === 'en' ? 'Net weight' : 'Peso neto', value: '720kg' },
@@ -90,7 +90,7 @@ export const getProducts = (lang: 'es' | 'en' = 'es'): Product[] => [
     slug: 'robot-soldadura-mig',
     name: lang === 'en' ? 'MIG Welding Robot' : 'Robot soldadura MIG',
     category: 'Robots',
-    image: '/images/robot-soldadura-mig-new.webp',
+    image: '/images/robot-soldadura-mig-new.png',
     title: lang === 'en' ? 'MIG WELDING ROBOT' : 'ROBOT SOLDADURA MIG',
     specs: [
       { label: lang === 'en' ? 'Payload' : 'Carga útil', value: '10kg' },
@@ -103,7 +103,7 @@ export const getProducts = (lang: 'es' | 'en' = 'es'): Product[] => [
     slug: 'robot-proposito-general',
     name: lang === 'en' ? 'General Purpose Robot' : 'Robot propósito general',
     category: 'Robots',
-    image: '/images/robot-proposito-general-new.webp',
+    image: '/images/robot-proposito-general-new.png',
     title: lang === 'en' ? 'GENERAL PURPOSE ROBOT' : 'ROBOT PROPOSITO GENERAL',
     specs: [
       { label: lang === 'en' ? 'Payload' : 'Carga útil', value: '20kg' },
@@ -116,7 +116,7 @@ export const getProducts = (lang: 'es' | 'en' = 'es'): Product[] => [
     slug: 'robot-pintura-polvo',
     name: lang === 'en' ? 'Powder Painting Robot' : 'Robot pintura en polvo',
     category: 'Robots',
-    image: '/images/robot-pintura-polvo-new.webp',
+    image: '/images/robot-pintura-polvo-new.png',
     title: lang === 'en' ? 'POWDER PAINTING ROBOT' : 'ROBOT PINTURA EN POLVO',
     specs: [
       { label: lang === 'en' ? 'Payload' : 'Carga útil', value: '6kg' },
@@ -129,7 +129,7 @@ export const getProducts = (lang: 'es' | 'en' = 'es'): Product[] => [
     slug: 'robot-pintura-liquida',
     name: lang === 'en' ? 'Liquid Painting Robot' : 'Robot pintura líquida',
     category: 'Robots',
-    image: '/images/robot-pintura-liquida-new.webp',
+    image: '/images/robot-pintura-liquida-new.png',
     title: lang === 'en' ? 'LIQUID PAINTING ROBOT' : 'ROBOT PINTURA LÍQUIDA',
     specs: [
       { label: lang === 'en' ? 'Payload' : 'Carga útil', value: '6kg' },
@@ -157,14 +157,14 @@ export const getPosts = (lang: 'es' | 'en' = 'es'): Post[] => [
       lang === 'en' 
         ? 'In today\'s industrial environment, where precision, speed, and efficiency are key to maintaining competitiveness.'
         : 'En el entorno industrial actual, donde la precisión, velocidad y eficiencia son clave para mantener la competitividad.',
-    image: '/images/blog-corte-laser.webp',
+    image: '/images/blog-corte-laser.png',
     recent: true,
   },
   {
     slug: 'errores-comunes-al-integrar-automatizacion',
     title: lang === 'en' ? 'Common mistakes when integrating automation in the industry' : 'Errores comunes al integrar automatización en la industria',
     excerpt: lang === 'en' ? 'Avoid them to ensure a successful implementation.' : 'Evítalos para asegurar una implementación exitosa.',
-    image: '/images/blog-errores.webp',
+    image: '/images/blog-errores.png',
     featured: true,
     recent: true,
   },
@@ -172,6 +172,6 @@ export const getPosts = (lang: 'es' | 'en' = 'es'): Post[] => [
     slug: 'que-procesos-automatizar-primero-con-robots',
     title: lang === 'en' ? 'What processes to automate first with robots?' : '¿Qué procesos automatizar primero con robots?',
     excerpt: lang === 'en' ? 'Practical guide to take the first step towards industrial automation.' : 'Guía práctica para dar el primer paso hacia la automatización industrial.',
-    image: '/images/blog-procesos.webp',
+    image: '/images/blog-procesos.png',
   },
 ]

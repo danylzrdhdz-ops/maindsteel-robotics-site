@@ -115,7 +115,7 @@ export default async function ServiciosPage({
     <>
       <PageHero
         title={dict.servicios.heroTitle}
-        image="/images/banner-servicios.webp"
+        image="/images/banner-servicios.png"
         alt="Línea de producción industrial con maquinaria y luces de planta"
         underline
       />
@@ -124,7 +124,7 @@ export default async function ServiciosPage({
         tone="navy"
         title={dict.servicios.services[0].title}
         body={dict.servicios.services[0].body}
-        image="/images/servicio-automatizacion.webp"
+        image="/images/servicio-automatizacion.png"
         alt="Ingeniero con casco blanco operando un panel HMI frente a robots industriales"
         quoteText={dict.servicios.quoteButton}
       >
@@ -146,7 +146,7 @@ export default async function ServiciosPage({
         reverse
         title={dict.servicios.services[1].title}
         body={dict.servicios.services[1].body}
-        image="/images/servicio-integracion.webp"
+        image="/images/servicio-integracion.png"
         alt="Técnico ajustando el gripper de un robot colaborativo en taller industrial"
         quoteText={dict.servicios.quoteButton}
       >
@@ -165,7 +165,7 @@ export default async function ServiciosPage({
         title={dict.servicios.services[2].title}
         bold
         body={dict.servicios.services[2].body}
-        image="/images/servicio-comercializacion.webp"
+        image="/images/servicio-comercializacion.png"
         alt="Ejecutivos revisando una tableta dentro de un almacén industrial"
         quoteText={dict.servicios.quoteButton}
       >
@@ -187,7 +187,7 @@ export default async function ServiciosPage({
         bold
         title={dict.servicios.services[3].title}
         body={dict.servicios.services[3].body}
-        image="/images/servicio-venta.webp"
+        image="/images/servicio-venta.png"
         alt="Brazo robótico naranja en una línea de producción"
         quoteText={dict.servicios.quoteButton}
       />
@@ -197,7 +197,7 @@ export default async function ServiciosPage({
         bold
         title={dict.servicios.services[4].title}
         body={dict.servicios.services[4].body}
-        image="/images/servicio-asesoria.webp"
+        image="/images/servicio-asesoria.png"
         alt="Dos técnicos con chalecos de seguridad revisando una laptop en planta"
         quoteText={dict.servicios.quoteButton}
       />

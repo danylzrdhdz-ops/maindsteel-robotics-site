@@ -35,7 +35,7 @@ export default async function BlogPage({
     <>
       <PageHero
         title={dict.blog.heroTitle}
-        image="/images/banner-blog.webp"
+        image="/images/banner-blog.png"
         alt="Exposición de robots industriales en una nave de manufactura"
         size="sm"
       />
@@ -59,7 +59,7 @@ export default async function BlogPage({
         <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 md:flex-row md:items-center md:gap-14">
           <div className="relative aspect-[4/3] w-full flex-1">
             <Image
-              src="/images/ingenieria-aplicada.webp"
+              src="/images/ingenieria-aplicada.png"
               alt="Detalle de maquinaria industrial con botón de paro de emergencia"
               fill
               sizes="(min-width: 768px) 45vw, 90vw"

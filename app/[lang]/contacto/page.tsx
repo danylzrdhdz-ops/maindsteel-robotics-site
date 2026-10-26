@@ -49,7 +49,7 @@ export default async function ContactoPage({
     <>
       <PageHero
         title={dict.contacto.heroTitle}
-        image="/images/banner-servicios.webp"
+        image="/images/banner-servicios.png"
         alt="Instalaciones industriales de Maindsteel Robotics"
       />
       <section className="bg-navy-deep py-12 md:py-16">

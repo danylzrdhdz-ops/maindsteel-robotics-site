@@ -54,7 +54,7 @@ export function MetricsSplit({
 
         <div className="relative min-h-[280px] flex-1 lg:min-h-0">
           <Image
-            src="/images/impresora-3d.webp"
+            src="/images/impresora-3d.png"
             alt="Detalle de un extrusor de impresión aditiva industrial en operación"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"

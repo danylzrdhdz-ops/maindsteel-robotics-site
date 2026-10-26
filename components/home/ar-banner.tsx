@@ -11,7 +11,7 @@ export async function ArBanner() {
   return (
     <section className="relative overflow-hidden">
       <Image
-        src="/images/warehouse-ar.webp"
+        src="/images/warehouse-ar.png"
         alt="Interior de una nave industrial vacía lista para instalación de robots"
         fill
         sizes="100vw"
@@ -27,7 +27,7 @@ export async function ArBanner() {
           <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
             <div className="relative h-64 w-40 shrink-0 overflow-hidden rounded-2xl border border-white/20 md:h-80 md:w-52">
               <Image
-                src="/images/ar-robot-phone.webp"
+                src="/images/ar-robot-phone.png"
                 alt="Teléfono mostrando un robot industrial en realidad aumentada"
                 fill
                 sizes="200px"
