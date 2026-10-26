@@ -7,17 +7,9 @@ export function Hero({ dict, lang = "es" }: { dict?: any; lang?: Lang }) {
     title: "MAINDSTEEL ROBOTICS",
     eyebrow: "Automatización y robótica industrial",
     subtitle: "Maquinaria y tecnología para un mundo en evolución.",
-    features: [
-      "Soldadura robotizada",
-      "Pick & place",
-      "Visión artificial",
-      "Integración llave en mano",
-    ],
     requestQuote: "Solicitar Cotización",
     requestService: "Solicitar un servicio",
   };
-
-  const features: string[] = t.features ?? [];
 
   return (
     <section className="relative overflow-hidden">
@@ -46,33 +38,20 @@ export function Hero({ dict, lang = "es" }: { dict?: any; lang?: Lang }) {
           <p className="mt-5 max-w-[36ch] text-lg font-bold leading-relaxed text-white md:max-w-[42ch] md:text-xl">
             {t.subtitle}
           </p>
-          <div className="mt-8 flex w-full flex-col items-center justify-center gap-4 sm:w-auto sm:flex-row">
+          <div className="mt-9 grid w-full max-w-4xl gap-4 sm:grid-cols-2">
             <Link
               href="/cotizaciones/index.html"
-              className="w-full rounded-full bg-brick px-8 py-3 text-center text-sm font-bold text-white transition-opacity hover:opacity-90 sm:w-auto"
+              className="w-full rounded-full bg-brick px-8 py-4 text-center text-base font-bold text-white transition-opacity hover:opacity-90"
             >
               {t.requestQuote}
             </Link>
             <Link
               href={localePath(lang, "/servicios")}
-              className="w-full rounded-full border-2 border-white px-8 py-3 text-center text-sm font-bold text-white transition-colors hover:bg-white hover:text-navy-deep sm:w-auto"
+              className="w-full rounded-full border-2 border-white px-8 py-4 text-center text-base font-bold text-white transition-colors hover:bg-white hover:text-navy-deep"
             >
               {t.requestService}
             </Link>
           </div>
-          {features.length > 0 && (
-            <ul className="mt-9 flex max-w-3xl flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-white/70 sm:text-xs">
-              {features.map((feature) => (
-                <li key={feature} className="flex items-center gap-2">
-                  <span
-                    className="size-1 rounded-full bg-brick"
-                    aria-hidden="true"
-                  />
-                  {feature}
-                </li>
-              ))}
-            </ul>
-          )}
         </div>
       </div>
     </section>
