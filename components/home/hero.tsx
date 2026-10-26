@@ -24,8 +24,8 @@ export function Hero({ dict, lang = "es" }: { dict?: any; lang?: Lang }) {
       <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/80 via-navy-deep/55 to-navy-deep/80" />
 
       <div className="relative mx-auto flex min-h-[520px] w-full max-w-[1400px] flex-col items-center justify-center px-6 py-20 text-center md:min-h-[600px] md:px-12">
-        <div className="flex w-full max-w-4xl flex-col items-center">
-          <h1 className="text-4xl leading-[1.05] text-balance text-white sm:text-5xl lg:text-6xl">
+        <div className="flex w-full max-w-5xl flex-col items-center">
+          <h1 className="text-4xl leading-[1.05] text-balance text-white sm:text-5xl lg:text-6xl xl:text-7xl">
             {t.title}
           </h1>
           <p className="mt-5 max-w-[36ch] text-lg font-bold leading-relaxed text-white md:max-w-[42ch] md:text-xl">
