@@ -1,21 +1,24 @@
-import Image from 'next/image'
-import QRCode from 'qrcode'
+import Image from "next/image";
+import QRCode from "qrcode";
 
 export async function ArBanner() {
-  const qrSvg = await QRCode.toString('https://maindsteel.mx/ar', {
-    type: 'svg',
+  const qrSvg = await QRCode.toString("https://maindsteel.mx/ar", {
+    type: "svg",
     margin: 0,
-    color: { dark: '#0b1c44', light: '#ffffff' },
-  })
+    color: { dark: "#0b1c44", light: "#ffffff" },
+  });
 
   return (
     <section className="relative overflow-hidden">
       <Image
-        src="/images/warehouse-ar.png"
+        src="/images/warehouse-ar.webp"
         alt="Interior de una nave industrial vacía lista para instalación de robots"
         fill
         sizes="100vw"
-        className="object-cover"
+        className=""
+
+        style={{ objectFit: "contain" }}
+        quality={80}
       />
       <div className="absolute inset-0 bg-navy-deep/55" />
 
@@ -24,11 +27,14 @@ export async function ArBanner() {
           <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
             <div className="relative h-64 w-40 shrink-0 overflow-hidden rounded-2xl border border-white/20 md:h-80 md:w-52">
               <Image
-                src="/images/ar-robot-phone.png"
+                src="/images/ar-robot-phone.webp"
                 alt="Teléfono mostrando un robot industrial en realidad aumentada"
                 fill
                 sizes="200px"
-                className="object-cover"
+                className=""
+
+                style={{ objectFit: "contain" }}
+                quality={80}
               />
             </div>
 
@@ -50,5 +56,5 @@ export async function ArBanner() {
         </div>
       </div>
     </section>
-  )
+  );
 }

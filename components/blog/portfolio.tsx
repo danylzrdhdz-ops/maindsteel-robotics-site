@@ -1,23 +1,32 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { getPosts } from '@/lib/data'
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { getPosts } from "@/lib/data";
+import { localePath } from "@/lib/i18n";
 
-export function Portfolio({ dict, lang = 'es' }: { dict: any, lang?: 'es' | 'en' }) {
-  const filtersEs = ['TODOS', 'RECIENTES', 'ANTERIORES'] as const
-  const filtersEn = ['ALL', 'RECENT', 'OLDER'] as const
-  const filters = lang === 'en' ? filtersEn : filtersEs
-  const [active, setActive] = useState<(typeof filters)[number]>(lang === 'en' ? 'ALL' : 'TODOS')
-  
-  const posts = getPosts(lang)
+export function Portfolio({
+  dict,
+  lang = "es",
+}: {
+  dict: any;
+  lang?: "es" | "en";
+}) {
+  const filtersEs = ["TODOS", "RECIENTES", "ANTERIORES"] as const;
+  const filtersEn = ["ALL", "RECENT", "OLDER"] as const;
+  const filters = lang === "en" ? filtersEn : filtersEs;
+  const [active, setActive] = useState<(typeof filters)[number]>(
+    lang === "en" ? "ALL" : "TODOS",
+  );
+
+  const posts = getPosts(lang);
 
   const visible = posts.filter((post) => {
-    if (active === 'RECIENTES' || active === 'RECENT') return post.recent
-    if (active === 'ANTERIORES' || active === 'OLDER') return !post.recent
-    return true
-  })
+    if (active === "RECIENTES" || active === "RECENT") return post.recent;
+    if (active === "ANTERIORES" || active === "OLDER") return !post.recent;
+    return true;
+  });
 
   return (
     <section className="bg-navy py-14 md:py-20">
@@ -37,10 +46,10 @@ export function Portfolio({ dict, lang = 'es' }: { dict: any, lang?: 'es' | 'en'
                 onClick={() => setActive(filter)}
                 aria-pressed={active === filter}
                 className={
-                  'border px-6 py-2.5 text-xs font-bold tracking-wide transition-colors ' +
+                  "border px-6 py-2.5 text-xs font-bold tracking-wide transition-colors " +
                   (active === filter
-                    ? 'border-brick bg-brick text-white'
-                    : 'border-white/70 text-white hover:bg-white/10')
+                    ? "border-brick bg-brick text-white"
+                    : "border-white/70 text-white hover:bg-white/10")
                 }
               >
                 {filter}
@@ -54,17 +63,20 @@ export function Portfolio({ dict, lang = 'es' }: { dict: any, lang?: 'es' | 'en'
             <article
               key={post.slug}
               className={
-                'group relative flex min-h-[20rem] flex-col justify-end overflow-hidden ' +
-                (post.featured ? 'md:min-h-[26rem]' : '') +
-                (index === 0 ? ' md:min-h-[19rem]' : '')
+                "group relative flex min-h-[20rem] flex-col justify-end overflow-hidden " +
+                (post.featured ? "md:min-h-[26rem]" : "") +
+                (index === 0 ? " md:min-h-[19rem]" : "")
               }
             >
               <Image
-                src={post.image || '/placeholder.svg'}
+                src={post.image || "/placeholder.svg"}
                 alt={post.title}
                 fill
                 sizes="(min-width: 768px) 45vw, 90vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className=" transition-transform duration-500 group-hover:scale-105"
+
+                style={{ objectFit: "contain" }}
+                quality={80}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/50 to-navy-deep/20" />
               <div className="relative flex flex-col items-start gap-3 p-6 md:p-8">
@@ -75,7 +87,7 @@ export function Portfolio({ dict, lang = 'es' }: { dict: any, lang?: 'es' | 'en'
                   {post.excerpt}
                 </p>
                 <Link
-                  href={`/blog/${post.slug}`}
+                  href={localePath(lang, `/blog/${post.slug}`)}
                   className="mt-2 border border-white px-5 py-2 text-xs font-bold tracking-wide text-white transition-colors hover:bg-white hover:text-navy-deep"
                 >
                   {dict.readMore}
@@ -86,5 +98,5 @@ export function Portfolio({ dict, lang = 'es' }: { dict: any, lang?: 'es' | 'en'
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -4,7 +4,7 @@
 
 @theme inline {
   --font-sans: var(--font-montserrat), ui-sans-serif, system-ui;
-  --font-heading: 'Akira Expanded', var(--font-montserrat), ui-sans-serif, system-ui;
+  --font-heading: var(--font-montserrat), ui-sans-serif, system-ui;
   --font-mono: ui-monospace, monospace;
 
   --color-background: var(--background);
@@ -84,14 +84,6 @@
     font-family: var(--font-heading);
     @apply font-extrabold tracking-tight;
   }
-}
-
-@font-face {
-  font-family: 'Akira Expanded';
-  src: local('Akira Expanded'), local('AkiraExpanded-SuperBold'), url('/fonts/Akira Expanded Super Bold.otf') format('opentype');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
 }
 
 @utility text-justify-block {

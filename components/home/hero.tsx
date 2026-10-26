@@ -1,23 +1,27 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
+import { localePath, type Lang } from "@/lib/i18n";
 
-export function Hero({ dict }: { dict?: any }) {
+export function Hero({ dict, lang = "es" }: { dict?: any; lang?: Lang }) {
   const t = dict || {
-    title: 'MAINDSTEEL ROBOTICS',
-    subtitle: 'Maquinaria y tecnología para un mundo en evolución.',
-    requestQuote: 'Solicitar Cotización',
-    requestService: 'Solicitar un servicio'
-  }
+    title: "MAINDSTEEL ROBOTICS",
+    subtitle: "Maquinaria y tecnología para un mundo en evolución.",
+    requestQuote: "Solicitar Cotización",
+    requestService: "Solicitar un servicio",
+  };
 
   return (
     <section className="relative overflow-hidden">
       <Image
-        src="/images/hero-robot.png"
+        src="/images/hero-robot.webp"
         alt="Brazo robótico industrial naranja operando en una planta automatizada"
         fill
-        priority
-        sizes="100vw"
-        className="object-cover"
+        preload
+        sizes="(min-width: 768px) 600px, 100vw"
+        className=""
+
+        style={{ objectFit: "contain" }}
+        quality={80}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/90 via-navy-deep/60 to-navy-deep/10" />
 
@@ -36,7 +40,7 @@ export function Hero({ dict }: { dict?: any }) {
             {t.requestQuote}
           </Link>
           <Link
-            href="/servicios"
+            href={localePath(lang, "/servicios")}
             className="rounded-full border-2 border-white px-8 py-3 text-center text-sm font-bold text-white transition-colors hover:bg-white hover:text-navy-deep"
           >
             {t.requestService}
@@ -44,5 +48,5 @@ export function Hero({ dict }: { dict?: any }) {
         </div>
       </div>
     </section>
-  )
+  );
 }

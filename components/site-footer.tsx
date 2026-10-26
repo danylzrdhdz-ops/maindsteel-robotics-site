@@ -1,23 +1,30 @@
-import Link from 'next/link'
-import { Mail, MapPin, Phone } from 'lucide-react'
-import { Logo } from '@/components/logo'
+import Link from "next/link";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { Logo } from "@/components/logo";
+import { localePath, type Lang } from "@/lib/i18n";
 import {
   FacebookIcon,
   InstagramIcon,
   LinkedinIcon,
-} from '@/components/social-icons'
+} from "@/components/social-icons";
 
 type FooterDict = {
-  subtitle: string
-  legalTitle: string
-  sitemapTitle: string
-  contactTitle: string
-  legal: { label: string; href: string }[]
-  sitemap: { label: string; href: string }[]
-  address: string
-}
+  subtitle: string;
+  legalTitle: string;
+  sitemapTitle: string;
+  contactTitle: string;
+  legal: { label: string; href: string }[];
+  sitemap: { label: string; href: string }[];
+  address: string;
+};
 
-export function SiteFooter({ dict }: { dict: FooterDict }) {
+export function SiteFooter({
+  dict,
+  lang = "es",
+}: {
+  dict: FooterDict;
+  lang?: Lang;
+}) {
   return (
     <footer className="bg-navy">
       <div className="mx-auto grid w-full max-w-[1200px] gap-12 px-6 py-16 md:grid-cols-3 md:px-10">
@@ -27,13 +34,25 @@ export function SiteFooter({ dict }: { dict: FooterDict }) {
             {dict.subtitle}
           </p>
           <div className="mt-5 flex items-center gap-3">
-            <a href="#" aria-label="LinkedIn" className="text-white hover:text-brick">
+            <a
+              href="#"
+              aria-label="LinkedIn"
+              className="text-white hover:text-brick"
+            >
               <LinkedinIcon className="h-6 w-6" />
             </a>
-            <a href="#" aria-label="Instagram" className="text-white hover:text-brick">
+            <a
+              href="#"
+              aria-label="Instagram"
+              className="text-white hover:text-brick"
+            >
               <InstagramIcon className="h-6 w-6" />
             </a>
-            <a href="#" aria-label="Facebook" className="text-white hover:text-brick">
+            <a
+              href="#"
+              aria-label="Facebook"
+              className="text-white hover:text-brick"
+            >
               <FacebookIcon className="h-6 w-6" />
             </a>
           </div>
@@ -44,7 +63,7 @@ export function SiteFooter({ dict }: { dict: FooterDict }) {
             {dict.legal.map((item) => (
               <li key={item.label}>
                 <Link
-                  href={item.href}
+                  href={localePath(lang, item.href)}
                   className="text-xs font-bold tracking-wide text-white hover:text-brick"
                 >
                   {item.label}
@@ -62,7 +81,7 @@ export function SiteFooter({ dict }: { dict: FooterDict }) {
             {dict.sitemap.map((item) => (
               <li key={item.label}>
                 <Link
-                  href={item.href}
+                  href={localePath(lang, item.href)}
                   className="text-sm font-semibold text-white hover:text-brick"
                 >
                   {item.label}
@@ -78,13 +97,19 @@ export function SiteFooter({ dict }: { dict: FooterDict }) {
           </h2>
           <ul className="mt-6 flex flex-col gap-6">
             <li className="flex items-start gap-4">
-              <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-brick" aria-hidden="true" />
+              <MapPin
+                className="mt-0.5 h-5 w-5 shrink-0 text-brick"
+                aria-hidden="true"
+              />
               <span className="text-justify-block text-sm font-bold leading-relaxed text-white">
                 {dict.address}
               </span>
             </li>
             <li className="flex items-start gap-4">
-              <Phone className="mt-0.5 h-5 w-5 shrink-0 text-brick" aria-hidden="true" />
+              <Phone
+                className="mt-0.5 h-5 w-5 shrink-0 text-brick"
+                aria-hidden="true"
+              />
               <a
                 href="tel:+524493054098"
                 className="text-sm font-bold text-white hover:text-brick"
@@ -93,7 +118,10 @@ export function SiteFooter({ dict }: { dict: FooterDict }) {
               </a>
             </li>
             <li className="flex items-start gap-4">
-              <Mail className="mt-0.5 h-5 w-5 shrink-0 text-brick" aria-hidden="true" />
+              <Mail
+                className="mt-0.5 h-5 w-5 shrink-0 text-brick"
+                aria-hidden="true"
+              />
               <a
                 href="mailto:contacto@maindsteel.mx"
                 className="text-sm font-bold text-white hover:text-brick"
@@ -105,5 +133,5 @@ export function SiteFooter({ dict }: { dict: FooterDict }) {
         </div>
       </div>
     </footer>
-  )
+  );
 }
