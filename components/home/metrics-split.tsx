@@ -58,9 +58,7 @@ export function MetricsSplit({
             alt="Detalle de un extrusor de impresión aditiva industrial en operación"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
-            className=""
-
-            style={{ objectFit: "contain" }}
+            className="object-cover"
             quality={80}
           />
         </div>

@@ -84,8 +84,7 @@ export function Catalog({ lang = "es" }: { lang?: "es" | "en" }) {
                     alt={product.name}
                     fill
                     sizes="(min-width: 1280px) 25vw, (min-width: 640px) 45vw, 90vw"
-
-                    style={{ objectFit: "contain" }}
+                    className="object-cover"
                     quality={80}
                   />
                 </div>

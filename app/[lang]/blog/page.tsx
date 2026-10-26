@@ -63,9 +63,7 @@ export default async function BlogPage({
               alt="Detalle de maquinaria industrial con botón de paro de emergencia"
               fill
               sizes="(min-width: 768px) 45vw, 90vw"
-              className=""
-
-              style={{ objectFit: "contain" }}
+              className="object-cover"
               quality={80}
             />
           </div>

@@ -55,8 +55,7 @@ export default async function ProductoPage({
               fill
               preload
               sizes="(min-width: 1024px) 340px, 90vw"
-
-              style={{ objectFit: "contain" }}
+              className="object-cover"
               quality={80}
             />
           </div>

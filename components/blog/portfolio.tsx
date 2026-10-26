@@ -73,9 +73,7 @@ export function Portfolio({
                 alt={post.title}
                 fill
                 sizes="(min-width: 768px) 45vw, 90vw"
-                className=" transition-transform duration-500 group-hover:scale-105"
-
-                style={{ objectFit: "contain" }}
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
                 quality={80}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/50 to-navy-deep/20" />

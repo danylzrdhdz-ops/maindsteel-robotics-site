@@ -59,9 +59,7 @@ export function ModelsCarousel({
                       alt={product.name}
                       fill
                       sizes="(max-width: 768px) 70vw, 260px"
-                      className=""
-
-                      style={{ objectFit: "contain" }}
+                      className="object-cover"
                       quality={80}
                     />
                   </div>

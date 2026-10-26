@@ -53,9 +53,7 @@ export default async function ArticlePage({
             fill
             preload
             sizes="(min-width: 1024px) 56rem, 90vw"
-            className=""
-
-            style={{ objectFit: "contain" }}
+            className="object-cover"
             quality={80}
           />
         </div>

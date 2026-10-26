@@ -15,9 +15,7 @@ export async function ArBanner() {
         alt="Interior de una nave industrial vacía lista para instalación de robots"
         fill
         sizes="100vw"
-        className=""
-
-        style={{ objectFit: "contain" }}
+        className="object-cover"
         quality={80}
       />
       <div className="absolute inset-0 bg-navy-deep/55" />
@@ -31,9 +29,7 @@ export async function ArBanner() {
                 alt="Teléfono mostrando un robot industrial en realidad aumentada"
                 fill
                 sizes="200px"
-                className=""
-
-                style={{ objectFit: "contain" }}
+                className="object-cover"
                 quality={80}
               />
             </div>

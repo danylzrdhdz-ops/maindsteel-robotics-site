@@ -28,9 +28,7 @@ export function PageHero({
         fill
         preload
         sizes="100vw"
-        className=""
-
-        style={{ objectFit: "contain" }}
+        className="object-cover"
         quality={80}
       />
       <div className="absolute inset-0 bg-navy-deep/35" />

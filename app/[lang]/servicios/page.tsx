@@ -90,9 +90,7 @@ function Service({
             alt={alt}
             fill
             sizes="(min-width: 768px) 40vw, 90vw"
-            className=""
-
-            style={{ objectFit: "contain" }}
+            className="object-cover"
             quality={80}
           />
         </div>

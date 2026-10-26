@@ -17,10 +17,8 @@ export function Hero({ dict, lang = "es" }: { dict?: any; lang?: Lang }) {
         alt="Brazo robótico industrial naranja operando en una planta automatizada"
         fill
         preload
-        sizes="(min-width: 768px) 600px, 100vw"
-        className=""
-
-        style={{ objectFit: "contain" }}
+        sizes="100vw"
+        className="object-cover"
         quality={80}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/90 via-navy-deep/60 to-navy-deep/10" />
