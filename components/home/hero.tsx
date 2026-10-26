@@ -38,16 +38,16 @@ export function Hero({ dict, lang = "es" }: { dict?: any; lang?: Lang }) {
           <p className="mt-5 max-w-[36ch] text-lg font-bold leading-relaxed text-white md:max-w-[42ch] md:text-xl">
             {t.subtitle}
           </p>
-          <div className="mt-9 grid w-full max-w-4xl gap-4 sm:grid-cols-2">
+          <div className="mt-9 grid w-full max-w-2xl gap-4 sm:grid-cols-2">
             <Link
               href="/cotizaciones/index.html"
-              className="w-full rounded-full bg-brick px-8 py-4 text-center text-base font-bold text-white transition-opacity hover:opacity-90"
+              className="w-full rounded-full bg-brick px-8 py-3.5 text-center text-sm font-bold text-white transition-opacity hover:opacity-90"
             >
               {t.requestQuote}
             </Link>
             <Link
               href={localePath(lang, "/servicios")}
-              className="w-full rounded-full border-2 border-white px-8 py-4 text-center text-base font-bold text-white transition-colors hover:bg-white hover:text-navy-deep"
+              className="w-full rounded-full border-2 border-white px-8 py-3.5 text-center text-sm font-bold text-white transition-colors hover:bg-white hover:text-navy-deep"
             >
               {t.requestService}
             </Link>
