@@ -9,7 +9,7 @@ export function Logo({ className }: { className?: string }) {
         alt="Maindsteel Robotics"
         width={1558}
         height={321}
-        className="h-8 w-auto object-contain"
+        className="h-9 w-auto object-contain"
         preload
         quality={80}
       />
