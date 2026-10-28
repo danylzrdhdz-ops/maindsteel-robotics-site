@@ -56,17 +56,18 @@ export function SiteHeader({
   return (
     <header className="sticky top-0 z-50 bg-navy/95 backdrop-blur supports-[backdrop-filter]:bg-navy/80">
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="relative mx-auto flex h-16 w-full max-w-[1400px] items-center gap-4 px-4 md:px-6">
+      <div className="relative mx-auto flex h-16 w-full max-w-[1400px] items-center px-4 md:px-6">
         <Link
           href={localePath(lang, "/")}
           aria-label="Maindsteel Robotics, ir al inicio"
+          className="shrink-0"
         >
           <Logo />
         </Link>
 
         <nav
           aria-label="Navegación principal"
-          className="ml-auto hidden items-center gap-7 lg:flex"
+          className="ml-10 hidden items-center gap-8 lg:flex xl:ml-14"
         >
           {navItems.map((item) => (
             <Link
@@ -85,7 +86,7 @@ export function SiteHeader({
           ))}
         </nav>
 
-        <div className="ml-8 hidden items-center gap-3 lg:flex">
+        <div className="ml-auto hidden items-center gap-3 lg:flex">
           <div className="flex items-center rounded-full bg-white/5 p-1 ring-1 ring-white/10">
             <button
               type="button"
