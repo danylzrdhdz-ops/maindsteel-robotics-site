@@ -22,10 +22,10 @@ export function Hero({ dict, lang = "es" }: { dict?: any; lang?: Lang }) {
         className="object-cover"
         quality={80}
       />
-      <div className="absolute inset-y-0 left-0 w-full max-w-[52rem] bg-gradient-to-r from-navy-deep via-navy-deep/90 to-transparent" />
+      <div className="absolute inset-y-0 left-0 w-full max-w-[56rem] bg-gradient-to-r from-navy-deep via-navy-deep/88 to-transparent" />
 
-      <div className="relative mx-auto flex min-h-[560px] w-full max-w-[1400px] flex-col justify-center px-6 py-20 md:min-h-[640px] md:px-12">
-        <div className="w-full max-w-[680px]">
+      <div className="relative mx-auto flex min-h-[560px] w-full max-w-[1400px] flex-col justify-center px-6 py-20 md:min-h-[640px] md:px-10 lg:px-12">
+        <div className="w-full max-w-[700px] pl-0 md:pl-4 lg:pl-8">
           <h1 className="text-4xl leading-[1.05] text-balance text-white sm:text-5xl lg:text-6xl xl:text-7xl">
             {t.title}
           </h1>
