@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-import { Menu, Search, ShoppingCart, X, Globe } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { localePath, type Lang } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
@@ -66,7 +66,7 @@ export function SiteHeader({
 
         <nav
           aria-label="Navegación principal"
-          className="ml-6 hidden items-center gap-6 lg:flex"
+          className="ml-auto hidden items-center gap-7 lg:flex"
         >
           {navItems.map((item) => (
             <Link
@@ -74,10 +74,10 @@ export function SiteHeader({
               href={item.href}
               aria-current={isActive(item.href) ? "page" : undefined}
               className={cn(
-                "border-b-2 pb-0.5 text-sm font-semibold transition-colors",
+                "relative text-sm font-semibold transition-colors after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-brick after:transition-transform after:duration-300 hover:after:scale-x-100",
                 isActive(item.href)
-                  ? "border-brick text-brick"
-                  : "border-transparent text-white hover:text-brick",
+                  ? "text-brick after:scale-x-100"
+                  : "text-white hover:text-brick",
               )}
             >
               {item.label}
@@ -85,64 +85,38 @@ export function SiteHeader({
           ))}
         </nav>
 
-        <div className="ml-auto flex items-center gap-3 md:gap-4">
-          <form
-            role="search"
-            onSubmit={(e) => e.preventDefault()}
-            className="hidden items-center gap-2 rounded-full bg-muted/70 px-3 py-1.5 md:flex"
-          >
-            <Search className="h-3.5 w-3.5 text-navy-deep" aria-hidden="true" />
-            <label htmlFor="site-search" className="sr-only">
-              Buscar en el sitio
-            </label>
-            <input
-              id="site-search"
-              type="search"
-              placeholder={dict?.search || "Buscar"}
-              className="w-28 bg-transparent text-sm text-navy-deep placeholder:text-navy-deep/70 focus:outline-none lg:w-36"
-            />
-          </form>
-
-          <button
-            type="button"
-            aria-label="Ver carrito de cotización"
-            className="text-white transition-colors hover:text-brick"
-          >
-            <ShoppingCart className="h-6 w-6" aria-hidden="true" />
-          </button>
-
-          {/* Language Switcher */}
-          <div className="hidden sm:flex items-center rounded-full bg-slate-800/50 p-1 border border-slate-700/50">
-            <Globe className="w-4 h-4 text-slate-400 ml-1.5 mr-1" />
-            <div className="flex items-center">
-              <button
-                onClick={() => switchLanguage("es")}
-                className={cn(
-                  "px-2 py-0.5 text-xs font-bold rounded-full transition-all cursor-pointer",
-                  lang === "es"
-                    ? "bg-brick text-white shadow-sm"
-                    : "text-slate-400 hover:text-white",
-                )}
-              >
-                ES
-              </button>
-              <button
-                onClick={() => switchLanguage("en")}
-                className={cn(
-                  "px-2 py-0.5 text-xs font-bold rounded-full transition-all cursor-pointer",
-                  lang === "en"
-                    ? "bg-brick text-white shadow-sm"
-                    : "text-slate-400 hover:text-white",
-                )}
-              >
-                EN
-              </button>
-            </div>
+        <div className="ml-8 hidden items-center gap-3 lg:flex">
+          <div className="flex items-center rounded-full bg-white/5 p-1 ring-1 ring-white/10">
+            <button
+              type="button"
+              onClick={() => switchLanguage("es")}
+              className={cn(
+                "px-2.5 py-1 text-xs font-bold rounded-full transition-all cursor-pointer",
+                lang === "es"
+                  ? "bg-brick text-white shadow-sm"
+                  : "text-white/70 hover:text-white",
+              )}
+              aria-pressed={lang === "es"}
+            >
+              ES
+            </button>
+            <button
+              type="button"
+              onClick={() => switchLanguage("en")}
+              className={cn(
+                "px-2.5 py-1 text-xs font-bold rounded-full transition-all cursor-pointer",
+                lang === "en"
+                  ? "bg-brick text-white shadow-sm"
+                  : "text-white/70 hover:text-white",
+              )}
+              aria-pressed={lang === "en"}
+            >
+              EN
+            </button>
           </div>
-
           <Link
             href="/cotizaciones/index.html"
-            className="hidden bg-brick px-5 py-2.5 text-sm font-bold text-white transition-opacity hover:opacity-90 sm:inline-block"
+            className="rounded-full bg-brick px-6 py-2.5 text-sm font-bold text-white transition-opacity hover:opacity-90"
           >
             {dict?.quoteButton || "Solicitar Cotización"}
           </Link>
@@ -153,7 +127,7 @@ export function SiteHeader({
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label={open ? "Cerrar menú" : "Abrir menú"}
-            className="text-white lg:hidden"
+            className="ml-auto text-white lg:hidden"
           >
             {open ? (
               <X className="h-6 w-6" aria-hidden="true" />
