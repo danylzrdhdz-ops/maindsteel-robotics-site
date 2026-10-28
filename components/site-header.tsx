@@ -54,9 +54,9 @@ export function SiteHeader({
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-navy/95 backdrop-blur supports-[backdrop-filter]:bg-navy/80">
+    <header className="sticky top-0 z-50 bg-navy">
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="relative mx-auto grid h-16 w-full max-w-[1400px] grid-cols-[auto_1fr_auto] items-center px-4 md:px-6 lg:px-8">
+      <div className="relative mx-auto grid h-[4.25rem] w-full max-w-[1400px] grid-cols-[auto_1fr_auto] items-center px-4 md:px-6 lg:px-8">
         <Link
           href={localePath(lang, "/")}
           aria-label="Maindsteel Robotics, ir al inicio"
