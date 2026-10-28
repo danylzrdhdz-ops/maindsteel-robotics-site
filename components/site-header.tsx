@@ -56,11 +56,11 @@ export function SiteHeader({
   return (
     <header className="sticky top-0 z-50 bg-navy/95 backdrop-blur supports-[backdrop-filter]:bg-navy/80">
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="relative mx-auto grid h-16 w-full max-w-[1400px] grid-cols-[auto_1fr_auto] items-center px-4 md:px-6">
+      <div className="relative mx-auto grid h-16 w-full max-w-[1400px] grid-cols-[auto_1fr_auto] items-center px-4 md:px-6 lg:px-8">
         <Link
           href={localePath(lang, "/")}
           aria-label="Maindsteel Robotics, ir al inicio"
-          className="shrink-0"
+          className="shrink-0 ml-1 md:ml-2 lg:ml-4"
         >
           <Logo />
         </Link>
@@ -86,7 +86,7 @@ export function SiteHeader({
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 justify-self-end lg:flex">
+        <div className="hidden items-center justify-self-end lg:flex">
           <div className="flex items-center rounded-full bg-white/5 p-1 ring-1 ring-white/10">
             <button
               type="button"
@@ -117,26 +117,26 @@ export function SiteHeader({
           </div>
           <Link
             href="/cotizaciones/index.html"
-            className="rounded-full bg-brick px-6 py-2.5 text-sm font-bold text-white transition-opacity hover:opacity-90"
+            className="ml-6 rounded-full bg-brick px-6 py-2.5 text-sm font-bold text-white transition-opacity hover:opacity-90"
           >
             {dict?.quoteButton || "Solicitar Cotización"}
           </Link>
-
-          <button
-            type="button"
-            onClick={() => setOpen((v) => !v)}
-            aria-expanded={open}
-            aria-controls="mobile-nav"
-            aria-label={open ? "Cerrar menú" : "Abrir menú"}
-            className="ml-auto text-white lg:hidden"
-          >
-            {open ? (
-              <X className="h-6 w-6" aria-hidden="true" />
-            ) : (
-              <Menu className="h-6 w-6" aria-hidden="true" />
-            )}
-          </button>
         </div>
+
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          aria-controls="mobile-nav"
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          className="ml-auto text-white lg:hidden"
+        >
+          {open ? (
+            <X className="h-6 w-6" aria-hidden="true" />
+          ) : (
+            <Menu className="h-6 w-6" aria-hidden="true" />
+          )}
+        </button>
       </div>
 
       {open && (
