@@ -117,7 +117,7 @@ export function SiteHeader({
           </div>
           <Link
             href="/cotizaciones/index.html"
-            className="ml-6 rounded-full bg-brick px-6 py-2.5 text-sm font-bold text-white transition-opacity hover:opacity-90"
+            className="ml-4 rounded-full bg-brick px-6 py-2.5 text-sm font-bold text-white transition-opacity hover:opacity-90"
           >
             {dict?.quoteButton || "Solicitar Cotización"}
           </Link>
