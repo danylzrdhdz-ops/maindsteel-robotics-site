@@ -67,7 +67,7 @@ export function SiteHeader({
 
         <nav
           aria-label="Navegación principal"
-          className="hidden items-center justify-center gap-8 lg:flex"
+          className="hidden items-center justify-center gap-9 lg:flex"
         >
           {navItems.map((item) => (
             <Link
@@ -75,7 +75,7 @@ export function SiteHeader({
               href={item.href}
               aria-current={isActive(item.href) ? "page" : undefined}
               className={cn(
-                "relative text-sm font-semibold transition-colors after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-brick after:transition-transform after:duration-300 hover:after:scale-x-100",
+                "relative text-[0.95rem] font-semibold transition-colors after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:origin-center after:scale-x-0 after:bg-brick after:transition-transform after:duration-300 hover:after:scale-x-100",
                 isActive(item.href)
                   ? "text-brick after:scale-x-100"
                   : "text-white hover:text-brick",
