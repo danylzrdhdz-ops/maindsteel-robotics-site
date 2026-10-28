@@ -60,7 +60,7 @@ export function SiteHeader({
         <Link
           href={localePath(lang, "/")}
           aria-label="Maindsteel Robotics, ir al inicio"
-          className="shrink-0 -ml-1 md:-ml-2 lg:-ml-3"
+          className="shrink-0 ml-1 md:ml-2 lg:ml-4"
         >
           <Logo />
         </Link>
