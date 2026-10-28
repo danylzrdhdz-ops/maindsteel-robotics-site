@@ -22,7 +22,7 @@ export function Hero({ dict, lang = "es" }: { dict?: any; lang?: Lang }) {
         className="object-cover"
         quality={80}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-navy-deep/70 to-navy-deep/25" />
+      <div className="absolute inset-y-0 left-0 w-full max-w-[52rem] bg-gradient-to-r from-navy-deep via-navy-deep/90 to-transparent" />
 
       <div className="relative mx-auto flex min-h-[560px] w-full max-w-[1400px] flex-col justify-center px-6 py-20 md:min-h-[640px] md:px-12">
         <div className="w-full max-w-[680px]">
@@ -48,8 +48,6 @@ export function Hero({ dict, lang = "es" }: { dict?: any; lang?: Lang }) {
           </div>
         </div>
       </div>
-
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-navy-deep/80 to-transparent" />
     </section>
   );
 }
