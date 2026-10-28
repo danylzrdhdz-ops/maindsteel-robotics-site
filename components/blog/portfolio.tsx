@@ -35,11 +35,7 @@ export function Portfolio({
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.18em] text-white/70">
-              <span className="size-1 rounded-full bg-brick" aria-hidden="true" />
-              {dict.title}
-            </span>
-            <h2 className="mt-4 text-2xl text-balance text-white md:text-3xl">
+            <h2 className="text-2xl text-balance text-white md:text-3xl">
               {dict.title}
             </h2>
             <span className="mt-4 block h-1 w-24 bg-brick" />

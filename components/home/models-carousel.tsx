@@ -32,11 +32,7 @@ export function ModelsCarousel({
       <div className="absolute -top-24 right-0 h-48 w-48 rounded-full bg-brick/5 blur-3xl" />
       <div className="relative mx-auto w-full max-w-[1200px] px-6 md:px-10">
         <div className="flex flex-col items-center text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-navy-deep/10 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.18em] text-navy-deep/70">
-            <span className="size-1 rounded-full bg-brick" aria-hidden="true" />
-            {dict.title}
-          </span>
-          <h2 className="mt-4 text-2xl text-card-foreground md:text-3xl">
+          <h2 className="text-2xl text-card-foreground md:text-3xl">
             {dict.title}
           </h2>
         </div>

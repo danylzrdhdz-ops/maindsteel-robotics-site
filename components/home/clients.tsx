@@ -7,11 +7,7 @@ export function Clients({ dict }: { dict: { title: string } }) {
       <div className="absolute -top-20 left-1/2 h-40 w-40 -translate-x-1/2 rounded-full bg-white/10 blur-3xl" />
       <div className="relative mx-auto w-full max-w-[1100px] px-6 md:px-10">
         <div className="flex flex-col items-center text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/30 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.18em] text-white/80">
-            <span className="size-1 rounded-full bg-white" aria-hidden="true" />
-            {dict.title}
-          </span>
-          <h2 className="mt-4 text-2xl text-white md:text-3xl">
+          <h2 className="text-2xl text-white md:text-3xl">
             {dict.title}
           </h2>
         </div>
