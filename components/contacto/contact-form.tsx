@@ -1,26 +1,31 @@
-'use client'
+"use client";
 
-import { FormEvent, useRef, useState } from 'react'
+import { FormEvent, useRef, useState } from "react";
 
 export function ContactForm({ dict }: { dict: any }) {
-  const [sent, setSent] = useState(false)
+  const [sent, setSent] = useState(false);
 
   const fields = [
-    { id: 'nombre', label: dict.nameLabel, type: 'text', autoComplete: 'name' },
+    { id: "nombre", label: dict.nameLabel, type: "text", autoComplete: "name" },
     {
-      id: 'correo',
-      label: dict.emailLabel || 'CORREO CORPORATIVO',
-      type: 'email',
-      autoComplete: 'email',
+      id: "correo",
+      label: dict.emailLabel || "CORREO CORPORATIVO",
+      type: "email",
+      autoComplete: "email",
     },
-    { id: 'empresa', label: dict.companyLabel || 'EMPRESA', type: 'text', autoComplete: 'organization' },
-  ]
+    {
+      id: "empresa",
+      label: dict.companyLabel || "EMPRESA",
+      type: "text",
+      autoComplete: "organization",
+    },
+  ];
 
   return (
     <form
       onSubmit={(e) => {
-        e.preventDefault()
-        setSent(true)
+        e.preventDefault();
+        setSent(true);
       }}
       className="mx-auto flex w-full max-w-sm flex-col gap-6"
     >
@@ -65,9 +70,9 @@ export function ContactForm({ dict }: { dict: any }) {
           {sent ? dict.successMessage : dict.submitButton}
         </button>
         <p role="status" aria-live="polite" className="text-xs text-navy-deep">
-          {sent ? dict.successMessage : ''}
+          {sent ? dict.successMessage : ""}
         </p>
       </div>
     </form>
-  )
+  );
 }

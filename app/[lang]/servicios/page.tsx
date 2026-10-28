@@ -58,9 +58,17 @@ function Service({
   return (
     <section
       className={
-        "py-14 md:py-20 " + (tone === "navy" ? "bg-navy-deep" : "bg-brick")
+        "relative overflow-hidden py-14 md:py-20 " +
+        (tone === "navy" ? "bg-navy-deep" : "bg-brick")
       }
     >
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
+      {tone === "brick" && (
+        <div className="absolute -left-20 top-10 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
+      )}
+      {tone === "navy" && (
+        <div className="absolute -right-24 top-0 h-64 w-64 rounded-full bg-brick/12 blur-3xl" />
+      )}
       <div
         className={
           "mx-auto flex max-w-6xl flex-col gap-8 px-6 md:items-center md:gap-12 " +
@@ -84,13 +92,13 @@ function Service({
             <CotizarButton text={quoteText || "SOLICITAR COTIZACIÓN"} />
           </div>
         </div>
-        <div className="relative aspect-[4/3] w-full flex-1 md:max-w-md">
+        <div className="relative aspect-[4/3] w-full flex-1 overflow-hidden shadow-[0_40px_80px_-60px_rgba(0,0,0,0.9)] ring-1 ring-white/10 md:max-w-md">
           <Image
             src={image || "/placeholder.svg"}
             alt={alt}
             fill
             sizes="(min-width: 768px) 40vw, 90vw"
-            className="object-cover"
+            className="object-cover transition-transform duration-700 hover:scale-105"
             quality={80}
           />
         </div>

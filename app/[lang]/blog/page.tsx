@@ -40,8 +40,9 @@ export default async function BlogPage({
         size="sm"
       />
 
-      <section className="bg-steel py-10">
-        <ul className="mx-auto flex max-w-6xl flex-col gap-8 px-6 text-center sm:flex-row sm:justify-between">
+      <section className="relative overflow-hidden bg-steel py-10">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
+        <ul className="relative mx-auto flex max-w-6xl flex-col gap-8 px-6 text-center sm:flex-row sm:justify-between">
           {dict.blog.kpis.map((kpi: any) => (
             <li key={kpi.label} className="flex-1">
               <p className="text-3xl text-brick md:text-4xl">{kpi.value}</p>
@@ -55,9 +56,11 @@ export default async function BlogPage({
 
       <Portfolio dict={dict.blog.portfolio} lang={lang} />
 
-      <section className="bg-navy-deep py-14 md:py-20">
-        <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 md:flex-row md:items-center md:gap-14">
-          <div className="relative aspect-[4/3] w-full flex-1">
+      <section className="relative overflow-hidden bg-navy-deep py-14 md:py-20">
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+        <div className="absolute -right-24 top-10 h-56 w-56 rounded-full bg-brick/12 blur-3xl" />
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-6 md:flex-row md:items-center md:gap-14">
+          <div className="relative aspect-[4/3] w-full flex-1 overflow-hidden shadow-[0_40px_80px_-60px_rgba(0,0,0,0.9)] ring-1 ring-white/10">
             <Image
               src="/images/ingenieria-aplicada.png"
               alt="Detalle de maquinaria industrial con botón de paro de emergencia"

@@ -46,7 +46,7 @@ export default async function ArticlePage({
           {post.title}
         </h1>
 
-        <div className="relative mt-8 aspect-[16/9] w-full">
+        <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden shadow-[0_40px_80px_-60px_rgba(11,28,68,0.9)] ring-1 ring-navy-deep/5">
           <Image
             src={post.image || "/placeholder.svg"}
             alt={post.title}

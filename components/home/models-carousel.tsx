@@ -27,18 +27,26 @@ export function ModelsCarousel({
   };
 
   return (
-    <section className="bg-white py-16">
-      <div className="mx-auto w-full max-w-[1200px] px-6 md:px-10">
-        <h2 className="text-center text-2xl text-card-foreground md:text-3xl">
-          {dict.title}
-        </h2>
+    <section className="relative overflow-hidden bg-white py-16">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-navy-deep/10 to-transparent" />
+      <div className="absolute -top-24 right-0 h-48 w-48 rounded-full bg-brick/5 blur-3xl" />
+      <div className="relative mx-auto w-full max-w-[1200px] px-6 md:px-10">
+        <div className="flex flex-col items-center text-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-navy-deep/10 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.18em] text-navy-deep/70">
+            <span className="size-1 rounded-full bg-brick" aria-hidden="true" />
+            {dict.title}
+          </span>
+          <h2 className="mt-4 text-2xl text-card-foreground md:text-3xl">
+            {dict.title}
+          </h2>
+        </div>
 
         <div className="relative mt-10 flex items-center gap-4">
           <button
             type="button"
             onClick={() => scrollBy(-1)}
             aria-label="Ver modelos anteriores"
-            className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-card-foreground shadow-[0_2px_12px_rgba(0,0,0,0.18)] md:flex"
+            className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-card-foreground shadow-[0_4px_30px_rgba(11,28,68,0.12)] ring-1 ring-navy-deep/5 md:flex"
           >
             <ChevronLeft className="h-6 w-6" aria-hidden="true" />
           </button>
@@ -50,7 +58,7 @@ export function ModelsCarousel({
             {products.map((product) => (
               <li
                 key={product.slug}
-                className="w-[16rem] shrink-0 snap-start bg-white shadow-[0_2px_14px_rgba(0,0,0,0.14)]"
+                className="w-[16rem] shrink-0 snap-start overflow-hidden rounded-sm bg-white shadow-[0_20px_60px_-30px_rgba(11,28,68,0.9)] ring-1 ring-navy-deep/5 transition-shadow duration-300 hover:shadow-[0_30px_70px_-25px_rgba(11,28,68,0.8)]"
               >
                 <div className="p-4">
                   <div className="relative aspect-4/3 overflow-hidden bg-muted/20">
@@ -81,7 +89,7 @@ export function ModelsCarousel({
             type="button"
             onClick={() => scrollBy(1)}
             aria-label="Ver más modelos"
-            className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-card-foreground shadow-[0_2px_12px_rgba(0,0,0,0.18)] md:flex"
+            className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-card-foreground shadow-[0_4px_30px_rgba(11,28,68,0.12)] ring-1 ring-navy-deep/5 md:flex"
           >
             <ChevronRight className="h-6 w-6" aria-hidden="true" />
           </button>

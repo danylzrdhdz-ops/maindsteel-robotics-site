@@ -26,8 +26,10 @@ export function SiteFooter({
   lang?: Lang;
 }) {
   return (
-    <footer className="bg-navy">
-      <div className="mx-auto grid w-full max-w-[1200px] gap-12 px-6 py-16 md:grid-cols-3 md:px-10">
+    <footer className="relative overflow-hidden bg-navy">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-brick/10 blur-3xl" />
+      <div className="relative mx-auto grid w-full max-w-[1200px] gap-12 px-6 py-16 md:grid-cols-3 md:px-10">
         <div>
           <Logo className="mb-5" />
           <p className="max-w-[16rem] text-justify-block text-sm font-bold leading-relaxed text-white">

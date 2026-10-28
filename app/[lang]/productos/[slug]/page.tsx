@@ -48,7 +48,7 @@ export default async function ProductoPage({
     <section className="bg-white py-10 md:py-14">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[minmax(0,340px)_1fr] lg:gap-14">
         <div className="flex flex-col gap-4">
-          <div className="relative aspect-[4/3] w-full overflow-hidden bg-steel-light">
+          <div className="relative aspect-[4/3] w-full overflow-hidden bg-steel-light shadow-[0_40px_80px_-60px_rgba(11,28,68,0.9)] ring-1 ring-navy-deep/5">
             <Image
               src={product.image || "/placeholder.svg"}
               alt={product.name}

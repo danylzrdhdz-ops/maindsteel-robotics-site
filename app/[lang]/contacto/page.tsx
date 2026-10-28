@@ -92,7 +92,7 @@ export default async function ContactoPage({
       </section>
 
       <div className="bg-navy-deep py-6 text-center shadow-[inset_0_4px_10px_rgba(0,0,0,0.1)]">
-        <p className="text-xl font-bold tracking-widest text-[#666666] md:text-2xl">
+        <p className="text-xl font-bold tracking-[0.35em] text-white/40 md:text-2xl">
           {dict.contacto.tagline}
         </p>
       </div>
