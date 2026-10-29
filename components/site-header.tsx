@@ -87,19 +87,6 @@ export function SiteHeader({
         </nav>
 
         <div className="hidden items-center justify-self-end lg:flex">
-          <Link
-            href="/cotizaciones/index.html"
-            className="mr-3 rounded-full bg-brick px-6 py-2.5 text-sm font-bold text-white transition-opacity hover:opacity-90"
-          >
-            {dict?.quoteButton || "Solicitar Cotización"}
-          </Link>
-          <a
-            href="tel:+524493054098"
-            className="mr-3 flex h-9 w-9 items-center justify-center rounded-full bg-white text-navy shadow-lg transition-all hover:bg-white/90"
-            aria-label="Llamar al 449 305 4098"
-          >
-            <Phone className="h-4 w-4" />
-          </a>
           <div className="flex items-center rounded-full bg-white/5 p-1 ring-1 ring-white/10">
             <button
               type="button"
@@ -128,6 +115,19 @@ export function SiteHeader({
               EN
             </button>
           </div>
+          <a
+            href="tel:+524493054098"
+            className="mx-2 flex h-9 w-9 items-center justify-center rounded-full bg-white text-navy shadow-lg transition-all hover:bg-white/90"
+            aria-label="Llamar al 449 305 4098"
+          >
+            <Phone className="h-4 w-4" />
+          </a>
+          <Link
+            href="/cotizaciones/index.html"
+            className="rounded-full bg-brick px-6 py-2.5 text-sm font-bold text-white transition-opacity hover:opacity-90"
+          >
+            {dict?.quoteButton || "Solicitar Cotización"}
+          </Link>
         </div>
 
         <button
