@@ -97,7 +97,7 @@ export const MessageCard: React.FC<MessageCardProps> = ({
 
           {/* Operation Success Title */}
           <h2 className="text-xl sm:text-2xl font-black text-white tracking-[0.2em] uppercase mb-3" style={{ fontFamily: 'Montserrat, sans-serif' }}>
-            OPERACIÓN EXITOSA
+            SOLICITUD ENVIADA
           </h2>
 
           {/* Main Success Confirmation Message (Removido textos de estatus según instrucciones) */}

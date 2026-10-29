@@ -40,10 +40,10 @@ export function generatePaso7Data(producto: string, empresa: string, category: I
     : (lang === 'en' ? 'the product' : 'el producto');
 
   return {
-    title: lang === 'en' ? "SUCCESSFUL OPERATION" : "OPERACIÓN EXITOSA",
+    title: lang === 'en' ? "REQUEST SENT" : "SOLICITUD ENVIADA",
     body: lang === 'en' 
-      ? `Your quotation request for ${tipoLabel} ${prodClean} for the company ${empClean} has been successfully processed.`
-      : `Tu solicitud de cotización para ${tipoLabel} ${prodClean} para la empresa ${empClean} ha sido procesada de manera exitosa.`,
+      ? `Your quotation request for ${tipoLabel} ${prodClean} for the company ${empClean} has been received.`
+      : `Tu solicitud de cotización para ${tipoLabel} ${prodClean} para la empresa ${empClean} ha sido recibida.`,
     followUp: lang === 'en'
       ? "A commercial advisor from our team will contact you manually in less than 5 minutes to follow up."
       : "Un asesor comercial de nuestro equipo se comunicará contigo de forma manual en menos de 5 minutos para dar seguimiento."

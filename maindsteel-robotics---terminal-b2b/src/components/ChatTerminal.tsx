@@ -440,7 +440,7 @@ export const ChatTerminal: React.FC<ChatTerminalProps> = ({
                 <span className="text-white text-5xl sm:text-7xl font-black">✓</span>
               </div>
               <h1 className="text-3xl sm:text-5xl font-black text-white text-center tracking-widest mb-6 drop-shadow-md">
-                OPERACIÓN EXITOSA
+                SOLICITUD ENVIADA
               </h1>
               <div className="bg-[#011538] border border-slate-700/60 rounded-xl p-6 sm:p-8 mb-8 text-center shadow-inner w-full">
                 <p className="text-slate-200 text-base sm:text-xl font-medium leading-relaxed">
