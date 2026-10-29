@@ -87,14 +87,6 @@ export function SiteHeader({
         </nav>
 
         <div className="hidden items-center justify-self-end lg:flex">
-          <a
-            href="tel:+524493054098"
-            className="mr-4 flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/10 transition-colors hover:bg-white/10"
-            aria-label="Llamar al 449 305 4098"
-          >
-            <Phone className="h-4 w-4" />
-            <span>449 305 4098</span>
-          </a>
           <div className="flex items-center rounded-full bg-white/5 p-1 ring-1 ring-white/10">
             <button
               type="button"
@@ -123,9 +115,17 @@ export function SiteHeader({
               EN
             </button>
           </div>
+          <a
+            href="tel:+524493054098"
+            className="ml-3 flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/10 transition-colors hover:bg-white/10"
+            aria-label="Llamar al 449 305 4098"
+          >
+            <Phone className="h-4 w-4" />
+            <span>449 305 4098</span>
+          </a>
           <Link
             href="/cotizaciones/index.html"
-            className="ml-4 rounded-full bg-brick px-6 py-2.5 text-sm font-bold text-white transition-opacity hover:opacity-90"
+            className="ml-3 rounded-full bg-brick px-6 py-2.5 text-sm font-bold text-white transition-opacity hover:opacity-90"
           >
             {dict?.quoteButton || "Solicitar Cotización"}
           </Link>
