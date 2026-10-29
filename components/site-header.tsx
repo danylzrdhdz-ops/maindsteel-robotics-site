@@ -95,7 +95,7 @@ export function SiteHeader({
           </Link>
           <a
             href="tel:+524493054098"
-            className="mr-3 flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/20 transition-colors hover:bg-white/15"
+            className="mr-3 flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-navy shadow-lg transition-all hover:bg-white/90"
             aria-label="Llamar al 449 305 4098"
           >
             <Phone className="h-4 w-4" />
