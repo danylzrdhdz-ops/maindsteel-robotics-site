@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, Phone } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { localePath, type Lang } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
@@ -87,6 +87,14 @@ export function SiteHeader({
         </nav>
 
         <div className="hidden items-center justify-self-end lg:flex">
+          <a
+            href="tel:+524493054098"
+            className="mr-4 flex items-center gap-2 rounded-full bg-white/5 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/10 transition-colors hover:bg-white/10"
+            aria-label="Llamar al 449 305 4098"
+          >
+            <Phone className="h-4 w-4" />
+            <span>449 305 4098</span>
+          </a>
           <div className="flex items-center rounded-full bg-white/5 p-1 ring-1 ring-white/10">
             <button
               type="button"
@@ -161,34 +169,42 @@ export function SiteHeader({
               </li>
             ))}
 
-            {/* Mobile Language Switcher */}
-            <li className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between">
-              <span className="text-sm font-semibold text-white flex items-center gap-2">
-                <Globe className="w-4 h-4" /> {dict?.language || "Idioma"}
-              </span>
-              <div className="flex items-center gap-1 bg-slate-800/80 p-1 rounded-full border border-slate-700">
-                <button
-                  onClick={() => switchLanguage("es")}
-                  className={cn(
-                    "px-3 py-1 text-xs font-bold rounded-full transition-all cursor-pointer",
-                    lang === "es"
-                      ? "bg-brick text-white shadow-sm"
-                      : "text-slate-400 hover:text-white",
-                  )}
-                >
-                  ES
-                </button>
-                <button
-                  onClick={() => switchLanguage("en")}
-                  className={cn(
-                    "px-3 py-1 text-xs font-bold rounded-full transition-all cursor-pointer",
-                    lang === "en"
-                      ? "bg-brick text-white shadow-sm"
-                      : "text-slate-400 hover:text-white",
-                  )}
-                >
-                  EN
-                </button>
+            {/* Mobile Phone + Language Switcher */}
+            <li className="mt-4 pt-4 border-t border-white/10">
+              <a
+                href="tel:+524493054098"
+                className="mb-3 flex items-center gap-2 text-sm font-semibold text-white"
+              >
+                <Phone className="w-4 h-4" /> 449 305 4098
+              </a>
+              <div className="flex items-center justify-between">
+                <span className="text-sm font-semibold text-white flex items-center gap-2">
+                  <Globe className="w-4 h-4" /> {dict?.language || "Idioma"}
+                </span>
+                <div className="flex items-center gap-1 bg-slate-800/80 p-1 rounded-full border border-slate-700">
+                  <button
+                    onClick={() => switchLanguage("es")}
+                    className={cn(
+                      "px-3 py-1 text-xs font-bold rounded-full transition-all cursor-pointer",
+                      lang === "es"
+                        ? "bg-brick text-white shadow-sm"
+                        : "text-slate-400 hover:text-white",
+                    )}
+                  >
+                    ES
+                  </button>
+                  <button
+                    onClick={() => switchLanguage("en")}
+                    className={cn(
+                      "px-3 py-1 text-xs font-bold rounded-full transition-all cursor-pointer",
+                      lang === "en"
+                        ? "bg-brick text-white shadow-sm"
+                        : "text-slate-400 hover:text-white",
+                    )}
+                  >
+                    EN
+                  </button>
+                </div>
               </div>
             </li>
           </ul>
