@@ -60,7 +60,7 @@ export default async function ProductoPage({
             />
           </div>
           <a
-            href={product.image || "#"}
+            href={(product as any).datasheet || product.image || "#"}
             download
             className="flex items-center justify-center gap-3 bg-brick px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-brick/90"
           >
