@@ -67,7 +67,7 @@ export function SiteHeader({
 
         <nav
           aria-label="Navegación principal"
-          className="hidden items-center justify-center gap-9 lg:flex lg:-translate-x-6"
+          className="hidden items-center justify-center gap-9 lg:flex lg:translate-x-2"
         >
           {navItems.map((item) => (
             <Link
@@ -86,7 +86,7 @@ export function SiteHeader({
           ))}
         </nav>
 
-        <div className="hidden items-center justify-self-end lg:flex lg:translate-x-4">
+        <div className="hidden items-center justify-self-end lg:flex lg:translate-x-2">
           <div className="flex items-center rounded-full bg-white/5 p-1 ring-1 ring-white/10">
             <button
               type="button"
