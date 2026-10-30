@@ -11,12 +11,13 @@ export function Clients() {
         </div>
         <div className="mt-8 flex justify-center md:mt-10">
           <Image
-            src="/images/nuestros-clientes.webp"
+            src="/images/nuestros-clientes.png"
             alt="Nuestros clientes"
-            width={1100}
-            height={200}
-            className="h-auto w-full max-w-[1050px] drop-shadow-[0_4px_30px_rgba(255,255,255,0.15)]"
-            sizes="(min-width: 1024px) 1050px, 90vw"
+            width={1400}
+            height={250}
+            className="h-auto w-full max-w-[1100px]"
+            sizes="(min-width: 1024px) 1100px, 90vw"
+            quality={90}
           />
         </div>
       </div>
