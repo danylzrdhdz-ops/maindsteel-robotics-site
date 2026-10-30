@@ -9,7 +9,7 @@ export function Clients({ dict }: { dict: { title: string } }) {
         <div className="flex flex-col items-center text-center">
           <h2 className="text-2xl text-white md:text-3xl">{dict.title}</h2>
         </div>
-        <div className="mt-6 flex justify-center">
+        <div className="mt-4 flex justify-center">
           <Image
             src="/images/logotipos-industriales.png"
             alt="Clientes industriales"
