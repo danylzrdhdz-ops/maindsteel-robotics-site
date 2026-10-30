@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { localePath, type Lang } from "@/lib/i18n";
@@ -57,6 +58,15 @@ export function SiteFooter({
             >
               <FacebookIcon className="h-6 w-6" />
             </a>
+          </div>
+          <div className="mt-6">
+            <Image
+              src="/images/certificaciones-bn.png"
+              alt="Certificaciones"
+              width={280}
+              height={90}
+              className="h-auto w-full max-w-[280px] opacity-90"
+            />
           </div>
           <p className="mt-6 inline-block border-b-2 border-brick pb-1 text-sm font-bold text-white">
             {dict.legalTitle}
