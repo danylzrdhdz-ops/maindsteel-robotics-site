@@ -7,9 +7,9 @@ export function Clients({ dict }: { dict: { title: string } }) {
       <div className="absolute -top-20 left-1/2 h-40 w-40 -translate-x-1/2 rounded-full bg-white/10 blur-3xl" />
       <div className="relative mx-auto w-full max-w-[1100px] px-6 md:px-10">
         <div className="flex flex-col items-center text-center">
-          <h2 className="-mt-1 text-2xl text-white md:-mt-2 md:text-4xl">{dict.title}</h2>
+          <h2 className="mt-1 text-2xl text-white md:mt-2 md:text-4xl">{dict.title}</h2>
         </div>
-        <div className="-mt-1 flex justify-center md:-mt-2">
+        <div className="-mt-3 flex justify-center md:-mt-4">
           <Image
             src="/images/logotipos-industriales.png"
             alt="Clientes industriales"
