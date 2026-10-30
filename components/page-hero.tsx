@@ -31,7 +31,7 @@ export function PageHero({
         className="object-cover"
         quality={80}
       />
-      <div className="absolute inset-0 bg-navy-deep/35" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/90 via-navy-deep/75 to-navy-deep/50" />
       <div className="relative flex flex-col items-center px-6 text-center">
         <h1 className="text-3xl text-balance text-white drop-shadow-md md:text-5xl">
           {title}
