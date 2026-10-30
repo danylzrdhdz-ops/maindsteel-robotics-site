@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function Clients({ dict }: { dict: { title: string } }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-brick to-brick/95 py-2 md:py-3">
+    <section className="relative overflow-hidden bg-brick py-2 md:py-3">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent" />
       <div className="absolute -top-20 left-1/2 h-40 w-40 -translate-x-1/2 rounded-full bg-white/10 blur-3xl" />
       <div className="relative mx-auto w-full max-w-[1100px] px-6 md:px-10">
