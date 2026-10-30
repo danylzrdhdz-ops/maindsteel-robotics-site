@@ -15,7 +15,7 @@ export function Clients() {
             alt="Nuestros clientes"
             width={1100}
             height={200}
-            className="h-auto w-full max-w-[1050px] brightness-0 invert opacity-95"
+            className="h-auto w-full max-w-[1050px] brightness-[1.1] contrast-[1.05]"
             sizes="(min-width: 1024px) 1050px, 90vw"
           />
         </div>
