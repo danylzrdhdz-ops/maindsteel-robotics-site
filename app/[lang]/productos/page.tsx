@@ -40,7 +40,7 @@ export default async function ProductosPage({
             ? "Robotic solutions designed for Industry 4.0"
             : "Soluciones robóticas diseñadas para la industria 4.0"
         }
-        image="/images/banner-productos.png"
+        image="/images/banner-productos.jpg"
         alt="Robot industrial ensamblando una carrocería en planta automotriz"
         underline
       />

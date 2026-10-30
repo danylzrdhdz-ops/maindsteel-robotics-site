@@ -130,7 +130,7 @@ export default async function ServiciosPage({
         tone="navy"
         title={dict.servicios.services[0].title}
         body={dict.servicios.services[0].body}
-        image="/images/servicio-automatizacion.png"
+                  image="/images/servicio-automatizacion.jpg"
         alt="Ingeniero con casco blanco operando un panel HMI frente a robots industriales"
         quoteText={dict.servicios.quoteButton}
       >
