@@ -40,7 +40,7 @@ export default async function NosotrosPage({
     <>
       <PageHero
         title={dict.nosotros.heroTitle}
-        image="/images/banner-nosotros.png"
+        image="/images/banner-nosotros.jpg"
         alt="Fila de robots de soldadura amarillos en una planta automotriz"
       />
 
