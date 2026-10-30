@@ -23,7 +23,7 @@ export default async function HomePage({
       <StatsBar dict={dict.home.stats} />
       <ModelsCarousel dict={dict.home.models} lang={lang} />
       <MetricsSplit dict={dict.home.metrics} lang={lang} />
-      <Clients dict={dict.home.clients} />
+      <Clients />
     </>
   );
 }
