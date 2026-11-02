@@ -14,7 +14,7 @@ export function Hero({ dict, lang = "es" }: { dict?: any; lang?: Lang }) {
   return (
     <section className="relative overflow-hidden">
       <Image
-        src="/images/hero-robot-opt.jpg"
+        src="/images/hero-robot-new.jpg"
         alt="Brazo robótico industrial naranja operando en una planta automatizada"
         fill
         preload
