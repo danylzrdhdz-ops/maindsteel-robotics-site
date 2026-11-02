@@ -11,10 +11,10 @@ export function Clients({ dict }: { dict: { title: string } }) {
         </div>
         <div className="-mt-2 flex justify-center md:-mt-3">
           <Image
-            src="/images/logotipos-industriales.png"
-            alt="Clientes industriales"
-            width={1400}
-            height={220}
+            src="/images/franja-logotipos-automotrices-blanco.png"
+            alt="Logotipos de clientes automotrices en blanco"
+            width={2169}
+            height={725}
             className="h-auto w-full max-w-[980px]"
             sizes="(min-width: 1024px) 980px, 90vw"
             quality={95}
