@@ -35,8 +35,8 @@ export default async function BlogPage({
     <>
       <PageHero
         title={dict.blog.heroTitle}
-        image="/images/banner-blog-new.jpg"
-        alt="Exposición de robots industriales en una nave de manufactura"
+        image="/images/portada-blog.jpg"
+        alt="Exposición de robótica industrial con brazos robóticos naranjas"
         size="sm"
       />
 
