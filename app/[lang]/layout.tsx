@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import { notFound } from "next/navigation";
@@ -171,7 +172,12 @@ export default async function RootLayout({
         <SiteHeader dict={dict.nav} lang={lang} />
         <main>{children}</main>
         <SiteFooter dict={dict.footer} lang={lang} />
-        {process.env.NODE_ENV === "production" && <Analytics />}
+        {process.env.NODE_ENV === "production" && (
+          <>
+            <Analytics />
+            <SpeedInsights />
+          </>
+        )}
       </body>
     </html>
   );

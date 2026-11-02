@@ -44,9 +44,28 @@ export default async function ProductoPage({
   const product = products.find((p) => p.slug === slug);
   if (!product) notFound();
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://maindsteel.mx";
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    description: product.title,
+    image: product.image ? `${siteUrl}${product.image}` : undefined,
+    brand: {
+      "@type": "Brand",
+      name: "Maindsteel Robotics",
+    },
+    category: product.category,
+  };
+
   return (
-    <section className="bg-white py-10 md:py-14">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[minmax(0,340px)_1fr] lg:gap-14">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <section className="bg-white py-10 md:py-14">
+        <div className="mx-auto grid max-w-6xl gap-10 px-6 lg:grid-cols-[minmax(0,340px)_1fr] lg:gap-14">
         <div className="flex flex-col gap-4">
           <div className="relative aspect-[4/3] w-full overflow-hidden bg-steel-light shadow-[0_40px_80px_-60px_rgba(11,28,68,0.9)] ring-1 ring-navy-deep/5">
             <Image
@@ -113,5 +132,6 @@ export default async function ProductoPage({
         </div>
       </div>
     </section>
+    </>
   );
 }
