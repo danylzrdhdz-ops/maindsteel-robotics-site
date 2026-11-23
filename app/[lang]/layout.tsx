@@ -106,17 +106,22 @@ export async function generateMetadata({
       description,
       images: ["/og-image.jpg"],
     },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-        "max-video-preview": -1,
-      },
-    },
+    // Content is pending company approval: stay out of search engines until
+    // SITE_ALLOW_INDEXING=true is set in the deployment environment.
+    robots:
+      process.env.SITE_ALLOW_INDEXING === "true"
+        ? {
+            index: true,
+            follow: true,
+            googleBot: {
+              index: true,
+              follow: true,
+              "max-image-preview": "large",
+              "max-snippet": -1,
+              "max-video-preview": -1,
+            },
+          }
+        : { index: false, follow: false, googleBot: { index: false, follow: false } },
   };
 }
 

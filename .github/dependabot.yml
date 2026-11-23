@@ -1,0 +1,21 @@
+version: 2
+updates:
+  # Main Next.js site
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      minor-and-patch:
+        update-types: ["minor", "patch"]
+
+  # Quote chat (Vite) built into public/cotizaciones
+  - package-ecosystem: "npm"
+    directory: "/maindsteel-robotics---terminal-b2b"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      minor-and-patch:
+        update-types: ["minor", "patch"]
