@@ -17,7 +17,19 @@ const nextConfig = {
     optimizePackageImports: ["lucide-react"],
   },
   async headers() {
+    // Also covers static files (chat HTML, PDFs, images) that have no <meta robots>.
+    const noIndex =
+      process.env.SITE_ALLOW_INDEXING === "true"
+        ? []
+        : [
+            {
+              source: "/:path*",
+              headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+            },
+          ];
+
     return [
+      ...noIndex,
       {
         source: "/images/:path*",
         headers: [

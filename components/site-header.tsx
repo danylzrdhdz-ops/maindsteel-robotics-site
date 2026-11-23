@@ -41,7 +41,8 @@ export function SiteHeader({
   const switchLanguage = (targetLang: Lang) => {
     if (lang === targetLang) return;
 
-    document.cookie = `x-lang=${targetLang}; path=/; max-age=31536000; samesite=lax`;
+    const secure = window.location.protocol === "https:" ? "; secure" : "";
+    document.cookie = `x-lang=${targetLang}; path=/; max-age=31536000; samesite=lax${secure}`;
 
     setOpen(false);
     router.push(localePath(targetLang, normalizePath(pathname)));

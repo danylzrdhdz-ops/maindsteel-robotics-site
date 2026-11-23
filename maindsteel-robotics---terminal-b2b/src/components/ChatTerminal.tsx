@@ -338,25 +338,24 @@ export const ChatTerminal: React.FC<ChatTerminalProps> = ({
           pais: finalSession.country || ''
         };
 
-        const enviarA_GoogleSheets = async (datos: any) => {
-          const urlWebhookGoogle = "https://script.google.com/macros/s/AKfycbwtRvyZ6saPXz2NLfd4gEGOtyu1wgIueipaVCY0CvBfEWgePYy__iFL1SNAUVltDYda0w/exec";
-          
+        // Leads go through our own server endpoint, which validates the data
+        // and holds the private webhook URL. Never call the webhook from here.
+        const enviarCotizacion = async (datos: typeof datosFinales) => {
           try {
-            await fetch(urlWebhookGoogle, {
+            const response = await fetch("/api/cotizacion", {
               method: "POST",
-              mode: "no-cors",
-              headers: { 
-                "Content-Type": "text/plain;charset=utf-8" 
-              },
+              headers: { "Content-Type": "application/json" },
               body: JSON.stringify(datos)
             });
-            console.log("Lead B2B transmitido de forma automática a la hoja de cálculo.");
+            if (!response.ok) {
+              console.error("No se pudo registrar la cotización:", response.status);
+            }
           } catch (error) {
-            console.error("Error en la transmisión digital del registro:", error);
+            console.error("Error al enviar la cotización:", error);
           }
         };
 
-        enviarA_GoogleSheets(datosFinales);
+        enviarCotizacion(datosFinales);
       } catch (e) {
         console.error("Webhook setup error:", e);
       }
@@ -484,6 +483,7 @@ export const ChatTerminal: React.FC<ChatTerminalProps> = ({
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               disabled={currentStep === 7}
+              maxLength={({ 1: 200, 2: 120, 3: 160, 4: 2000, 5: 160, 6: 100 } as Record<number, number>)[currentStep] ?? 200}
               placeholder={getPlaceholderText()}
               className="flex-1 bg-[#021D49] border border-slate-700 focus:border-[#AA2D29] focus:ring-1 focus:ring-[#AA2D29] rounded-xl px-4 py-2.5 sm:py-3 text-sm text-white placeholder:text-slate-400 font-sans transition-all outline-none"
               autoFocus
