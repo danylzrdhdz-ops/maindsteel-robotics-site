@@ -8,6 +8,13 @@ import type { NextRequest } from "next/server";
  * never in the client bundle.
  */
 
+// TEMPORARY fallback so leads keep flowing until COTIZACION_WEBHOOK_URL is set
+// in Vercel. This URL already appears in the public git history, so this adds
+// no new exposure, and it is server-only (never sent to browsers).
+// TODO: remove once the env var exists and the Apps Script deployment is rotated.
+const FALLBACK_WEBHOOK_URL =
+  "https://script.google.com/macros/s/AKfycbwtRvyZ6saPXz2NLfd4gEGOtyu1wgIueipaVCY0CvBfEWgePYy__iFL1SNAUVltDYda0w/exec";
+
 const MAX_BODY_BYTES = 8 * 1024;
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 const RATE_LIMIT_MAX = 5;
@@ -127,11 +134,7 @@ export async function POST(request: NextRequest) {
     return json(400, { ok: false, error: "invalid_fields" });
   }
 
-  const webhookUrl = process.env.COTIZACION_WEBHOOK_URL;
-  if (!webhookUrl) {
-    console.error("[cotizacion] COTIZACION_WEBHOOK_URL is not configured");
-    return json(503, { ok: false, error: "unavailable" });
-  }
+  const webhookUrl = process.env.COTIZACION_WEBHOOK_URL || FALLBACK_WEBHOOK_URL;
 
   try {
     const upstream = await fetch(webhookUrl, {
