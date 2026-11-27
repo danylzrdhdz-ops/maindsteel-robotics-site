@@ -44,7 +44,9 @@ export function SiteFooter({
               <LinkedinIcon className="h-6 w-6" />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/maindsteelrobotics"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="text-white hover:text-brick"
             >
