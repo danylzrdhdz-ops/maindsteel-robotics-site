@@ -49,7 +49,9 @@ export function SiteFooter({
               <InstagramIcon className="h-6 w-6" />
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/share/1EqzhweBEz/"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Facebook"
               className="text-white hover:text-brick"
             >
