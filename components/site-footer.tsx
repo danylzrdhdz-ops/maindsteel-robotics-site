@@ -2,11 +2,7 @@ import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { localePath, type Lang } from "@/lib/i18n";
-import {
-  FacebookIcon,
-  InstagramIcon,
-  LinkedinIcon,
-} from "@/components/social-icons";
+import { FacebookIcon, InstagramIcon } from "@/components/social-icons";
 
 type FooterDict = {
   subtitle: string;
@@ -37,21 +33,25 @@ export function SiteFooter({
           </p>
           <div className="mt-5 flex items-center gap-3">
             <a
-              href="#"
-              aria-label="LinkedIn"
+              href="mailto:contacto@maindsteel.mx"
+              aria-label="Correo electrónico"
               className="text-white hover:text-brick"
             >
-              <LinkedinIcon className="h-6 w-6" />
+              <Mail className="h-6 w-6" aria-hidden="true" />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/maindsteelrobotics"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="text-white hover:text-brick"
             >
               <InstagramIcon className="h-6 w-6" />
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/share/1EqzhweBEz/"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Facebook"
               className="text-white hover:text-brick"
             >
