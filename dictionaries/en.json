@@ -128,7 +128,6 @@
     "sitemapTitle": "SITEMAP",
     "contactTitle": "CONTACT & ADDRESS",
     "legal": [
-      { "label": "PRIVACY POLICY", "href": "/contacto" },
       { "label": "TERMS AND CONDITIONS", "href": "/contacto" },
       { "label": "WARRANTY", "href": "/contacto" }
     ],
