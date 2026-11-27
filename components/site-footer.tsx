@@ -58,21 +58,25 @@ export function SiteFooter({
               <FacebookIcon className="h-6 w-6" />
             </a>
           </div>
-          <p className="mt-6 inline-block border-b-2 border-brick pb-1 text-sm font-bold text-white">
-            {dict.legalTitle}
-          </p>
-          <ul className="mt-4 flex flex-col gap-3">
-            {dict.legal.map((item) => (
-              <li key={item.label}>
-                <Link
-                  href={localePath(lang, item.href)}
-                  className="text-xs font-bold tracking-wide text-white hover:text-brick"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          {dict.legal.length > 0 && (
+            <>
+              <p className="mt-6 inline-block border-b-2 border-brick pb-1 text-sm font-bold text-white">
+                {dict.legalTitle}
+              </p>
+              <ul className="mt-4 flex flex-col gap-3">
+                {dict.legal.map((item) => (
+                  <li key={item.label}>
+                    <Link
+                      href={localePath(lang, item.href)}
+                      className="text-xs font-bold tracking-wide text-white hover:text-brick"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
         </div>
 
         <div>

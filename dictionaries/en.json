@@ -127,10 +127,7 @@
     "legalTitle": "LEGAL",
     "sitemapTitle": "SITEMAP",
     "contactTitle": "CONTACT & ADDRESS",
-    "legal": [
-      { "label": "TERMS AND CONDITIONS", "href": "/contacto" },
-      { "label": "WARRANTY", "href": "/contacto" }
-    ],
+    "legal": [],
     "sitemap": [
       { "label": "Home", "href": "/" },
       { "label": "Products", "href": "/productos" },
