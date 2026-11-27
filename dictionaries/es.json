@@ -128,7 +128,6 @@
     "sitemapTitle": "MAPA EL SITIO",
     "contactTitle": "CONTACTO Y DIRECCIÓN",
     "legal": [
-      { "label": "AVISO DE PRIVACIDAD", "href": "/contacto" },
       { "label": "TÉRMINOS Y CONDICIONES", "href": "/contacto" },
       { "label": "GARANTÍA", "href": "/contacto" }
     ],
